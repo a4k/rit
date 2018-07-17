@@ -1,6 +1,7 @@
 <?
 $sSectionName = "События";
 $arDirProperties = Array(
-   "id" => "events"
+   "id" => "events",
+   "hide_title" => "false"
 );
 ?>

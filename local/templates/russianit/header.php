@@ -67,26 +67,26 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
                     <div class="header header_breadcrumb">
                         <div class="container">
                             <div class="menu row between-xs middle-xs">
-                                <div class="logo_area col-xs-12 col-md center-xs start-md">
+                                <!-- <div class="logo_area col-xs-12 col-md center-xs start-md">
                                     <a href="/">
                                         <div class="logo">
                                         </div>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div class="breadcrumbs col-xs-12 col-md-12 center-xs"
                                      itemprop="http://schema.org/breadcrumb" itemscope
                                      itemtype="http://schema.org/BreadcrumbList">
                                     <? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	".default", 
-	array(
-		"START_FROM" => "0",
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-); ?>
+                                    	"bitrix:breadcrumb", 
+                                    	".default", 
+                                    	array(
+                                    		"START_FROM" => "0",
+                                    		"PATH" => "",
+                                    		"SITE_ID" => "s1",
+                                    		"COMPONENT_TEMPLATE" => ".default"
+                                    	),
+                                    	false
+                                    ); ?>
                                 </div>
                                 <div class="col-xs"></div>
                             </div>
@@ -96,6 +96,26 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
                     <div class="title">
                         <h2><? $APPLICATION->ShowTitle(false); ?></h2>
                     </div>
+                <? endif ?>
+
+                <? if ($APPLICATION->GetProperty("id") == "price"): ?>
+                    <section class="menu_b">
+                         <? $APPLICATION->IncludeComponent("bitrix:menu", "price", array(
+                            "ROOT_MENU_TYPE" => "price",
+                            "MENU_CACHE_TYPE" => "Y",
+                            "MENU_CACHE_TIME" => "36000000",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "MAX_LEVEL" => "1",
+                            "CHILD_MENU_TYPE" => "left",
+                            "USE_EXT" => "N",
+                            "ALLOW_MULTI_SELECT" => "N"
+                        ),
+                            false
+                        ); ?>
+
+                    </section>
+
                 <? endif ?>
             <? endif ?>
 

@@ -926,6 +926,7 @@ h5 {
   font: 14px/40px IBM Plex Sans;
   height: 160px;
   width: 100%;
+  resize: none;
   padding: 0 15px; }
 
 .form_title label {
@@ -1123,7 +1124,7 @@ h5 {
   .cards .card {
     padding: 0;
     position: relative;
-    height: 260px;
+    height: 275px;
     margin-bottom: 20px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -1231,7 +1232,7 @@ h5 {
         font-family: ProximaNova-Reg;
         font-size: 22px;
         line-height: normal;
-        margin-bottom: 0; }
+        margin-bottom: 10px; }
         .cards .card_body .card_title a {
           color: #333333; }
           .cards .card_body .card_title a:hover {
@@ -1358,6 +1359,7 @@ h5 {
         margin-bottom: 0; }
         .toggles .toggle_head .title h4 {
           text-align: left;
+          color: #41688C;
           cursor: pointer; }
       .toggles .toggle_head h3 {
         margin: 0;
@@ -1410,6 +1412,39 @@ h5 {
   z-index: 500; }
   .modal-open {
     overflow: hidden; }
+  .modal#newUpdate .title h3 {
+    text-align: left;
+    margin: 0; }
+  .modal#newUpdate .modal_body .link {
+    color: #DB0306; }
+    .modal#newUpdate .modal_body .link:hover {
+      opacity: .8;
+      text-decoration: none; }
+  .modal#newUpdate .modal_body .update_info {
+    margin-bottom: 30px; }
+    .modal#newUpdate .modal_body .update_info .title_bold {
+      margin-bottom: 0; }
+      .modal#newUpdate .modal_body .update_info .title_bold h4 {
+        line-height: 24px; }
+    .modal#newUpdate .modal_body .update_info_header {
+      height: 60px; }
+      .modal#newUpdate .modal_body .update_info_header p {
+        font-size: 14px;
+        line-height: 20px; }
+      .modal#newUpdate .modal_body .update_info_header .item {
+        height: 60px;
+        padding: 0 30px; }
+        .modal#newUpdate .modal_body .update_info_header .item:first-child {
+          background: #DFDFDF; }
+        .modal#newUpdate .modal_body .update_info_header .item:last-child {
+          background: #E9E9E9; }
+    .modal#newUpdate .modal_body .update_info_row {
+      height: 60px; }
+      .modal#newUpdate .modal_body .update_info_row p {
+        font-size: 14px;
+        line-height: 20px; }
+      .modal#newUpdate .modal_body .update_info_row:nth-child(2n+1) {
+        background: #F7F7F7; }
   .modal#newWebinary .title h3 {
     text-align: left;
     margin: 0; }
@@ -1489,7 +1524,8 @@ h5 {
       .modal#newHire .vacancy_manager .manager_info {
         margin-bottom: 20px; }
       .modal#newHire .vacancy_manager .manager_photo {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        width: 100%; }
       .modal#newHire .vacancy_manager .manager_voice {
         font-style: italic; }
   .modal.newMedia .close {
@@ -1960,8 +1996,6 @@ h5 {
     .header.header_breadcrumb .container .menu .logo {
       width: 50px;
       height: 50px; }
-    .header.header_breadcrumb .breadcrumbs {
-      margin: 0; }
   .header.header_product {
     height: auto;
     background: #FBFBFB;
@@ -2192,6 +2226,12 @@ footer {
   background: #384B61;
   color: #FFFFFF;
   padding: 40px 0 0; }
+  footer a {
+    color: #FFFFFF !important; }
+    footer a:hover {
+      color: #FFFFFF !important;
+      opacity: .8;
+      text-decoration: none; }
   footer .container {
     height: 100%; }
     footer .container .footer_nav .cards {
@@ -2293,6 +2333,13 @@ footer {
   padding-bottom: 0; }
   #index .slider_wrapper .slide {
     position: relative; }
+    #index .slider_wrapper .slide_link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 6;
+      width: 100%;
+      height: 100%; }
     #index .slider_wrapper .slide[data-slide="1"] .slide_photo:after {
       background: #FFFFFF; }
     #index .slider_wrapper .slide[data-slide="1"] .slide_photo_img {
@@ -2310,13 +2357,14 @@ footer {
       width: 100px;
       margin-bottom: 35px; }
     #index .slider_wrapper .slide[data-slide="1"] .slide_info {
-      height: 100%;
-      position: relative; }
+      z-index: 7;
+      position: relative;
+      padding: 0;
+      height: 54px; }
       #index .slider_wrapper .slide[data-slide="1"] .slide_info .btn {
-        margin: 0px auto;
-        position: absolute;
-        bottom: 30px;
-        width: 200px; }
+        margin-top: 548px;
+        width: 200px;
+        z-index: 8; }
     #index .slider_wrapper .slide[data-slide="1"] .slide_about_text {
       font: 34px/52px ProximaNova-Bold;
       color: #555555; }
@@ -2513,13 +2561,31 @@ footer {
       height: auto;
       background: transparent; }
 
+@media (min-width: 1200px) and (max-width: 1440px) {
+  #index .slider_wrapper .slide[data-slide="1"] .slide_info {
+    padding: 0 60px; } }
+
 @media (min-width: 768px) and (max-width: 1200px) {
+  #index .slider_wrapper .slide[data-slide="1"] .slide_info {
+    padding: 0 40px; }
   #index .clients .partners .ct_3 .card:nth-child(2) {
     margin: 0 100px; } }
 
 @media (max-width: 768px) {
   #index .slider_inner {
     height: 568px; }
+  #index .slider_wrapper .slide[data-slide="1"] .slide_photo_img {
+    background: url(/upload/images/item/main_banner2.jpg) no-repeat;
+    background-size: auto 568px;
+    background-position: center; }
+  #index .slider_wrapper .slide[data-slide="1"] .slide_info {
+    padding: 0 55px; }
+    #index .slider_wrapper .slide[data-slide="1"] .slide_info .btn {
+      font-size: 14px;
+      height: 45px;
+      line-height: 45px;
+      margin-top: 520px;
+      width: 100%; }
   #index .slider_wrapper .slide_info {
     padding: 190px 20px 0;
     height: 100%; }
@@ -2621,18 +2687,14 @@ footer {
     margin-right: 0; } }
 
 @media (max-width: 580px) {
+  #index .slider_inner .owl-dots {
+    bottom: -20px; }
   #index .slider_wrapper .slide[data-slide="1"] .slide_photo_img {
     background: url(/upload/images/item/mobile_main_banner2.jpg) no-repeat;
-    background-size: cover;
+    background-size: auto 568px;
     background-position: center; }
-  #index .slider_wrapper .slide[data-slide="1"] .slide_info .btn {
-    font-size: 14px;
-    height: 45px;
-    line-height: 45px;
-    bottom: 10px;
-    width: 250px;
-    left: 50%;
-    margin-left: -125px; } }
+  #index .slider_wrapper .slide[data-slide="1"] .slide_info {
+    padding: 0 20px; } }
 
 #product {
   /* Medium device styles */
@@ -3413,12 +3475,18 @@ footer {
 #support .breadcrumbs {
   margin-bottom: 60px; }
 
+#support a {
+  color: #2D9CDB; }
+  #support a:hover {
+    text-decoration: none;
+    opacity: .8; }
+
 #support .support .about {
   color: #373737;
-  margin-bottom: 30px; }
+  margin-bottom: 60px; }
 
 #support .support .title_bold {
-  margin-bottom: 60px; }
+  margin-bottom: 35px; }
 
 #support .support_blocks {
   padding-bottom: 60px; }
@@ -3443,9 +3511,6 @@ footer {
     margin-bottom: 30px; }
   #support .support_block .item_body a.link_big {
     font: 30px/46px ProximaNova-Bold; }
-  #support .support_block .item_body a:hover {
-    text-decoration: none;
-    color: #41688C; }
 
 #support .techsup .product_list {
   padding-bottom: 60px; }
@@ -3692,9 +3757,54 @@ footer {
         margin-bottom: 13px; } }
 
 #events {
+  /* Medium device style */
+  /* xsmall device style */
   /* Medium device style */ }
   #events .breadcrumbs a {
     color: #DB0306; }
+  #events #content a {
+    color: #DB0306; }
+    #events #content a:hover {
+      text-decoration: none;
+      opacity: .8; }
+  #events .event {
+    padding: 30px 0 0; }
+    #events .event .breadcrumbs {
+      margin-bottom: 30px; }
+    #events .event_date {
+      color: #a9a9a9;
+      font-size: 14px;
+      margin-bottom: 35px; }
+    #events .event .hr {
+      width: 118px;
+      margin: 30px 0; }
+    #events .event .text {
+      padding: 0 0 60px; }
+      #events .event .text_nopadding {
+        padding: 0; }
+      #events .event .text img {
+        width: 100%;
+        min-height: 500px;
+        border: 1px solid #cfcfcf; }
+      #events .event .text p {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: #373737; }
+      #events .event .text a {
+        color: #DB0306; }
+    #events .event_social a {
+      margin: 0 5px; }
+  @media (max-width: 992px) {
+    #events .event_date {
+      font-size: 12px; } }
+  @media (max-width: 580px) {
+    #events .text .list_out {
+      margin-left: 17px; }
+      #events .text .list_out li {
+        margin-bottom: 9px; }
+    #events .event_social a {
+      display: block;
+      line-height: 35px; } }
   #events .events_list .item {
     color: #a9a9a9;
     margin-top: 30px; }
@@ -3753,9 +3863,9 @@ footer {
   /* xsmall device style */ }
   #event .breadcrumbs a {
     color: #DB0306; }
-  #event a {
+  #event #content a {
     color: #DB0306; }
-    #event a:hover {
+    #event #content a:hover {
       text-decoration: none;
       opacity: .8; }
   #event .event {
@@ -3810,8 +3920,11 @@ footer {
     padding-bottom: 40px; }
     #hire .whybest .features .feature_row {
       margin-bottom: 40px; }
-      #hire .whybest .features .feature_row .item .icon {
-        margin-bottom: 20px; }
+      #hire .whybest .features .feature_row .item {
+        padding: 0 30px;
+        text-align: center; }
+        #hire .whybest .features .feature_row .item .icon {
+          margin-bottom: 20px; }
   #hire .hire_items {
     padding: 70px 0 80px; }
     #hire .hire_items .toggles {
@@ -3851,7 +3964,7 @@ footer {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-right: 20px; }
+    margin: 0  10px; }
     #contacts .infob .social_item a {
       display: block; }
       #contacts .infob .social_item a .icon {
@@ -4556,7 +4669,7 @@ footer {
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        padding: 10px 0; }
+        padding: 10px 30px; }
         #fanalys .capability .reports_block .item a {
           margin-bottom: 10px;
           font-family: ProximaNova-Reg;
@@ -4948,3 +5061,24 @@ footer {
     #fanalys .what_get {
       padding: 30px 20px;
       margin: 0 -20px 40px; } }
+
+#page404 .link, #page404 a {
+  color: #41688C; }
+  #page404 .link:hover, #page404 a:hover {
+    opacity: .8;
+    text-decoration: none; }
+
+#page404 .main_info {
+  padding: 116px 0; }
+  #page404 .main_info .title h1 {
+    font: 150px/150px ProximaNova-Bold;
+    letter-spacing: 5%; }
+
+#page404 .main .hedgehog {
+  background: url(/upload/images/icon/hedgehog.svg) no-repeat center;
+  background-size: 91px auto;
+  width: 91px;
+  height: 114px;
+  position: absolute;
+  left: 0;
+  bottom: 0px; }
