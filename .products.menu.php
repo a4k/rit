@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Продукты", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Помощник арбитражного управляющего", 
+		"/pau", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"HUDWAY", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"F-анализ", 
+		"/products/pau",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Печать конвертов", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Пробили.ру", 
+		"#", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
