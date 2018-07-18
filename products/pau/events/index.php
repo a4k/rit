@@ -110,7 +110,7 @@ $APPLICATION->SetTitle("События");
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "/products/pau/events/",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

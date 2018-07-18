@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"История версий", 
-		"/products/pau/history/", 
+		"/products/pau/version/", 
 		Array(), 
 		Array(), 
 		"" 

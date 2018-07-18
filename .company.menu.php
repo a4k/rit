@@ -9,14 +9,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Вакансии", 
-		"/vacancies", 
+		"/about/vacancies", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		"/contacts", 
+		"/about/contacts", 
 		Array(), 
 		Array(), 
 		"" 

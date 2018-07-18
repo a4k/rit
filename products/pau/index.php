@@ -43,7 +43,7 @@ CModule::IncludeModule("iblock");
                                 </div>
                                 <div class="info_column col-xs-12 col-md-3 start-xs end-md">
                                     <p>
-                                        <a href="/products/pau/history" class="link">Что нового?</a>
+                                        <a href="/products/pau/version" class="link">Что нового?</a>
                                     </p>
                                 </div>
                             </div>

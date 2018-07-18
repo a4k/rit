@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("История версий");
             <div class="s_container">
                 <? $APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"history", 
+	"version", 
 	array(
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
@@ -20,7 +20,7 @@ $APPLICATION->SetTitle("История версий");
 		"ACTIVE_DATE_FORMAT" => "j F Y",
 		"CACHE_TYPE" => "N",
 		"CACHE_TIME" => "3600",
-		"COMPONENT_TEMPLATE" => "history",
+		"COMPONENT_TEMPLATE" => "version",
 		"SORT_BY1" => "TIMESTAMP_X",
 		"SORT_ORDER1" => "DESC",
 		"SORT_BY2" => "SORT",
@@ -75,7 +75,7 @@ $APPLICATION->SetTitle("История версий");
 		"USE_REVIEW" => "N",
 		"USE_FILTER" => "N",
 		"SEF_MODE" => "Y",
-		"SEF_FOLDER" => "/products/pau/history/",
+		"SEF_FOLDER" => "/products/pau/version/",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"USE_SHARE" => "N",
@@ -105,9 +105,9 @@ $APPLICATION->SetTitle("История версий");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"SEF_URL_TEMPLATES" => array(
-			"news" => "/products/pau/history/",
+			"news" => "/products/pau/version/",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		),
 	),
 	false

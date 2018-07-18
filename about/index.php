@@ -212,7 +212,7 @@ CModule::IncludeModule("iblock");
                     <?
                     $vacancies = 0;
                     // Количество вакансий
-                    $res = CIBlockElement::GetList(Array("SORT" => "ASC", "timestamp_x" => "DESC"), Array("IBLOCK_ID" => "2"), false, Array());
+                    $res = CIBlockElement::GetList(Array("SORT" => "ASC", "timestamp_x" => "DESC"), Array("IBLOCK_ID" => "5"), false, Array());
                     while ($obj = $res->GetNext()) {
                         $vacancies++;
                     }
@@ -226,7 +226,7 @@ CModule::IncludeModule("iblock");
                                     <? echo $vacancies . ' ' . declension_words($vacancies, Array('вакансия', 'вакансии', 'вакансий')); ?>
                                         .</p>
                             </div>
-                            <a href="/vacancies" class="btn btn-outline">Подробнее</a>
+                            <a href="/about/vacancies" class="btn btn-outline">Подробнее</a>
                         </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ $this->setFrameMode(true);
                             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                             $version = $arItem["PROPERTIES"]["version"]["VALUE"]; // Версия
                         ?>
-                        <? if($arItem['ID'] == $arParams['CURRENT_VERSION'] or ($arParams['CURRENT_VERSION'] == '0' and $element == 0)): ?>
+                        <? if($arItem['CODE'] == $arParams['CURRENT_VERSION'] or ($arParams['CURRENT_VERSION'] == '0' and $element == 0)): ?>
                             <div class="link_page noactive">
                                 <p>
                                     <span><?echo $version;?></span>
