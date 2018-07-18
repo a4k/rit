@@ -2,7 +2,7 @@
 	<?$i=0?>
 	<?foreach ($arResult['ITEMS'] as $key=>$val):?>
 		<?$i++;?>
-		<div class="toggle <?if($i==2) {?>opened<?}?>">
+		<div class="toggle">
 			<div class="toggle_head">
 				<div class="title">
 					<h4><?=$val['NAME']?></h4>

@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("История версий");
 		"DISPLAY_NAME" => "Y",
 		"IBLOCK_TYPE" => "pau",
 		"IBLOCK_ID" => "3",
-		"NEWS_COUNT" => "7",
+		"NEWS_COUNT" => "1",
 		"DETAIL_URL" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"ACTIVE_DATE_FORMAT" => "j F Y",
