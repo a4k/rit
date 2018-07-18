@@ -77,7 +77,7 @@ CModule::IncludeModule("iblock");
                                 <h5 class="card_title"><a>Печать конвертов</a></h5>
                                 <p class="card_text">Автоматическая печать конвертов, печать реестров, уведомлений, ведение баз данных контрагентов и проведённых рассылок.</p>
                             </div>
-                            <a href="http://mnogopisem.ru/" class="card_link"><span></span></a>
+                            <a href="http://mnogopisem.ru/" target="_blank" class="card_link"><span></span></a>
                         </div>
                         <div class="card slide" data-product="probili" data-color="#CD4550" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-probili.svg)" class="holder_image card_photo"></div>
@@ -151,9 +151,8 @@ CModule::IncludeModule("iblock");
                     <h3><a href="/about">Компания</a></h3>
                 </div>
                 <div class="s_container company_about">
-                    <p>
-                        Политика фирмы заключается в том, чтобы предоставить клиенту возможность выбора программного продукта, который наибольшим образом будет соответствовать его целям и задачам, во внедрении этого программного продукта, настройке его под конкретные требования клиента, которые почти всегда отличаются своей спецификой, и дальнейшем сопровождении.
-                    </p>
+                    <p>Русские информационные технологии— одновременно продуктовая и сервисная компания. На протяжении 15 лет мы разрабатываем и сопровождаем информационные системы разного уровня.
+                        <br> В нашем портфолио успешные истории создания собственных продуктов: «Помощник арбитражного управляющего», F-анализ, HUDWAY, а также десятки сложных заказных веб-сервисов для клиентов со всего мира.</p>
                 </div>
                 <div class="cards about_items ct_3 ctm_1">
                     <div class="card">
@@ -266,8 +265,17 @@ CModule::IncludeModule("iblock");
     #launcher {
         display: none
     }
-.cards.product-cards .card[data-product="hudway"]:hover .card_photo {background-image: url(/upload/images/item/prod-hudway-h.svg)!important;}
-.cards.product-cards .card[data-product="pechat"]:hover .card_photo {background-image: url(/upload/images/item/prod-pechat-h.svg)!important;}
-.cards.product-cards .card[data-product="probili"]:hover .card_photo {background-image: url(/upload/images/item/prod-probili-h.svg)!important;}
+
+    .cards.product-cards .card[data-product="hudway"]:hover .card_photo {
+        background-image: url(/upload/images/item/prod-hudway-h.svg)!important;
+    }
+
+    .cards.product-cards .card[data-product="pechat"]:hover .card_photo {
+        background-image: url(/upload/images/item/prod-pechat-h.svg)!important;
+    }
+
+    .cards.product-cards .card[data-product="probili"]:hover .card_photo {
+        background-image: url(/upload/images/item/prod-probili-h.svg)!important;
+    }
     </style>
     <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

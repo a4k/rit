@@ -15,7 +15,6 @@ $APPLICATION->SetTitle("История версий");
 		"DISPLAY_NAME" => "Y",
 		"IBLOCK_TYPE" => "pau",
 		"IBLOCK_ID" => "3",
-		"NEWS_COUNT" => "1",
 		"DETAIL_URL" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"ACTIVE_DATE_FORMAT" => "j F Y",
@@ -42,7 +41,7 @@ $APPLICATION->SetTitle("История версий");
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"CACHE_GROUPS" => "N",
 		"SET_TITLE" => "Y",
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_META_KEYWORDS" => "Y",
@@ -82,12 +81,10 @@ $APPLICATION->SetTitle("История версий");
 		"USE_SHARE" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+			"DETAIL_TEXT"
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			"version"
 		),
 		"META_KEYWORDS" => "-",
 		"META_DESCRIPTION" => "-",
@@ -99,7 +96,7 @@ $APPLICATION->SetTitle("История версий");
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "version",
 			1 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -111,7 +108,7 @@ $APPLICATION->SetTitle("История версий");
 			"news" => "/products/pau/history/",
 			"section" => "",
 			"detail" => "#ELEMENT_ID#/",
-		)
+		),
 	),
 	false
 ); ?>

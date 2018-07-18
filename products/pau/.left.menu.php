@@ -8,76 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Возможности", 
-		"/products/pau/features/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Обзор", 
-		"/products/pau/overview/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Отзывы", 
-		"/products/pau/reviews/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Демо-версия", 
-		"/products/pau/demo/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Купить", 
-		"/products/pau/buy/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Возможности", 
-		"/products/pau/features/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Обзор сервиса", 
-		"/products/pau/overview/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Отзывы", 
-		"/products/pau/reviews/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Демо-версия", 
-		"/products/pau/demo/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Купить", 
-		"/products/pau/buy/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"История версий", 
 		"/products/pau/history/", 
 		Array(), 
@@ -85,7 +15,7 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"uprcompany", 
+		"Управляющая компания", 
 		"/products/pau/uprcompany/", 
 		Array(), 
 		Array(), 
@@ -101,20 +31,6 @@ $aMenuLinks = Array(
 	Array(
 		"События", 
 		"/products/pau/events/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Событие", 
-		"/products/pau/event.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"История версий", 
-		"/products/pau/history.php", 
 		Array(), 
 		Array(), 
 		"" 

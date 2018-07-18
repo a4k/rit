@@ -42,7 +42,7 @@ $APPLICATION->SetTitle("Продукты");
                         <h5 class="card_title"><a>Печать конвертов</a></h5>
                         <p class="card_text">Автоматическая печать конвертов, печать реестров, уведомлений, ведение баз данных контрагентов и проведённых рассылок.</p>
                     </div>
-                    <a href="http://mnogopisem.ru/" class="card_link"><span></span></a>
+                    <a href="http://mnogopisem.ru/" target="_blank" class="card_link"><span></span></a>
                 </div>
                 <div class="card slide" data-product="probili" data-color="#CD4550" data-tcolor="#fff">
                     <div style="background-image: url(/upload/images/item/prod-probili.svg)" class="holder_image card_photo"></div>

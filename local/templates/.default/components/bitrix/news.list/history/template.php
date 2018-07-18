@@ -12,37 +12,36 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="events_list">
-    <?if($arParams["DISPLAY_TOP_PAGER"]):?>
-        <?=$arResult["NAV_STRING"]?><br />
-    <?endif;?>
-    <?foreach($arResult["ITEMS"] as $arItem):?>
-        <?
-        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-        ?>
-        <div class="item row">
-            <div class="col-xs-12 col-md-3 center-xs start-md date">
-                <p>
+
+<?if($arParams["TYPE_PAGE"] == 'pagination'): ?>
+   <div class="pagination">
+        <?if($arParams["DISPLAY_TOP_PAGER"]):?>
+            <?=$arResult["NAV_STRING"]?>
+                <br />
+                <?endif;?>
+                    <? $element = 0;
+                    foreach($arResult["ITEMS"] as $arItem):?>
+                        <?
+                            $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                            $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                            $version = $arItem["PROPERTIES"]["version"]["VALUE"]; // Версия
+                        ?>
+                        <? if($arItem['ID'] == $arParams['CURRENT_VERSION'] or ($arParams['CURRENT_VERSION'] == '0' and $element == 0)): ?>
+                            <div class="link_page noactive">
+                                <p>
+                                    <span><?echo $version;?></span>
+                                </p>
+                            </div>
+                        <? else: ?>
+                            <div class="link_page">
+                                <p>
+                                    <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?echo $version?></a>
+                                </p>
+                            </div>
+                        <? endif;?>
                     <?
-                    if(isset($arItem['ACTIVE_FROM'])) {
-                        $time = $arItem['ACTIVE_FROM'];
-                    } else {
-                        $time = $arItem['TIMESTAMP_X'];
-                    }
-                    $site_format = CSite::GetDateFormat(); // DD.MM.YYYY HH:MI:SS
-                    // РїСЂРµРѕР±СЂР°Р·СѓРµРј РґР°С‚Сѓ РІ Unix С„РѕСЂРјР°С‚
-                    if ($stmp = MakeTimeStamp($time, $site_format))
-                    {
-                        // РІС‹РІРµРґРµРј РґР°С‚Сѓ Р°РєС‚РёРІРЅРѕСЃС‚Рё РІС‹Р±СЂР°РЅРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РїСЂРѕРёР·РІРѕР»СЊРЅРѕРј РІРёРґРµ
-                        echo FormatDate("d F Y", $stmp); // 28 January 2005
-                    }
+                        $element++;
+                        endforeach;
                     ?>
-                </p>
-            </div>
-            <div class="col-xs-12 col-md-8 title center-xs start-md">
-                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="link"><?echo $arItem["NAME"]?></a>
-            </div>
-        </div>
-    <?endforeach;?>
-</div>
+    </div>
+<?endif;?>
