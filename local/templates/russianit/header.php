@@ -62,7 +62,7 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
         <div id="content">
             <? if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?>
             <? else: ?>
-                <? if ($APPLICATION->GetProperty("hide_title") !== "Y"): ?>
+                <? if ($APPLICATION->GetProperty("hide_title") !== "Y" and ERROR_404 !== "Y"): ?>
 
                     <div class="header header_breadcrumb">
                         <div class="container">
@@ -115,7 +115,73 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
                         ); ?>
 
                     </section>
+                <? endif ?>
 
+                <? if ($APPLICATION->GetProperty("id") == "product" or $APPLICATION->GetProperty("id") == "fanalys"): ?>
+                    <? if($APPLICATION->GetProperty("id") == "product"): ?>
+                        <!-- Текущая версия продукта в мобильной версии -->
+                        <section class="notification pau hidden-bm visible-m">
+                            <p>
+                                Вышла версия 3.9.8 программы «Помощник арбитражного управляющего»
+                            </p>
+                        </section>
+                    <? endif ?>
+                        
+                    <!-- Шапка продукта -->
+                    <div class="header-fantom header_product">
+                    </div>
+                    <div class="header header_product h-top">
+                        <div class="container">
+                            <div class="menu row between-xs middle-xs">
+                                <div class="logo_area col-xs-12 col-md center-xs start-md">
+                                    <a href="/">
+                                        <div class="logo" id="prodmenu_logo">
+                                            <!-- <img src="images/logo.png" class="holder_image"> -->
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="#" class="menu_mobile"><span class="icon_line"></span><span class="icon_line"></span><span
+                                            class="icon_line"></span></a>
+                                <nav class="menu_topr col-xs-12 col-md-10 center-xs">
+                                    <div class="hidden-bm close">
+                                    </div>
+
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:menu", 
+                                        "anchor", 
+                                        array(
+                                            "ROOT_MENU_TYPE" => "submenu",
+                                            "MENU_CACHE_TYPE" => "Y",
+                                            "MENU_CACHE_TIME" => "36000000",
+                                            "MENU_CACHE_USE_GROUPS" => "Y",
+                                            "MENU_CACHE_GET_VARS" => array(
+                                            ),
+                                            "MAX_LEVEL" => "1",
+                                            "CHILD_MENU_TYPE" => "submenu",
+                                            "USE_EXT" => "N",
+                                            "ALLOW_MULTI_SELECT" => "N",
+                                            "COMPONENT_TEMPLATE" => "anchor",
+                                            "DELAY" => "N"
+                                        ),
+                                        false
+                                    );?>
+
+
+                                </nav>
+                                <div class="col-xs">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <? if($APPLICATION->GetProperty("id") == "product"): ?>
+                        <!-- Текущая версия продукта -->
+                        <section class="notification pau hidden-m">
+                            <p>
+                                Вышла версия 3.9.8 программы «Помощник арбитражного управляющего»
+                            </p>
+                        </section>
+                    <? endif ?>
                 <? endif ?>
             <? endif ?>
 

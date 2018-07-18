@@ -1,8 +1,22 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Успешная отправка", 
-		"/vacancies/success/", 
+		"О компании", 
+		"../", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"../contacts", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"../vacancies", 
 		Array(), 
 		Array(), 
 		"" 

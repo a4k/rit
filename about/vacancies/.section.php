@@ -1,6 +1,7 @@
 <?
 $sSectionName = "Вакансии";
 $arDirProperties = Array(
-   "id" => "hire"
+   "id" => "hire",
+   "hide_title" => "false"
 );
 ?>

@@ -64,7 +64,7 @@ $APPLICATION->SetTitle("Контакты");
 	<section class="map">
 		<div class="container">
 			<div class="map_area">
-				<img src="/upload/images/contacts_map.jpg" class="map_area_photo">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8de1d1d26f1a546d8607dc2e23857f9543a62d3d49f754bd6e097bcfbd12f179&amp;width=100%&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
 			</div>
 		</div>
 	</section>

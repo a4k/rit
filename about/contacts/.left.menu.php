@@ -1,22 +1,22 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Контактная информация", 
-		"./",
+		"О компании", 
+		"../", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Реквизиты компании", 
-		"./requisites",
+		"Контакты", 
+		"../contacts", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Задать вопрос", 
-		"./feedback",
+		"Вакансии", 
+		"../vacancies", 
 		Array(), 
 		Array(), 
 		"" 

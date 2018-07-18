@@ -121,16 +121,16 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
                                      itemprop="http://schema.org/breadcrumb" itemscope
                                      itemtype="http://schema.org/BreadcrumbList">
                                     <? $APPLICATION->IncludeComponent(
-                                        "bitrix:breadcrumb",
-                                        ".default",
-                                        array(
-                                            "START_FROM" => "1",
-                                            "PATH" => "",
-                                            "SITE_ID" => "s1",
-                                            "COMPONENT_TEMPLATE" => ".default"
-                                        ),
-                                        false
-                                    ); ?>
+	"bitrix:breadcrumb", 
+	".default", 
+	array(
+		"START_FROM" => "0",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+); ?>
                                 </div>
                                 <div class="col-xs"></div>
                             </div>

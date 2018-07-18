@@ -30,7 +30,7 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
 
 
 <? Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.3.1.min.js'); ?>
-<? Asset::getInstance()->addJs('/local/assets/js/owl.carousel.js'); ?>
+<!-- <? Asset::getInstance()->addJs('/local/assets/js/owl.carousel.js'); ?> -->
 <? Asset::getInstance()->addJs('/local/assets/js/mc-validate.js'); ?>
 <? Asset::getInstance()->addJs('/local/assets/js/app.js'); ?>
 

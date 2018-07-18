@@ -15,7 +15,6 @@ CModule::IncludeModule("iblock");
 
             </div>
         </section>-->
-
         <section class="infob block_content">
             <div class="container">
                 <div class="row between-xs">
@@ -30,13 +29,10 @@ CModule::IncludeModule("iblock");
                                 </h2>
                             </div>
                             <p>
-                                Русские информационные технологии— одновременно продуктовая и сервисная компания.
-                                На протяжении 15 лет мы разрабатываем и сопровождаем информационные системы разного уровня.
+                                Русские информационные технологии— одновременно продуктовая и сервисная компания. На протяжении 15 лет мы разрабатываем и сопровождаем информационные системы разного уровня.
                             </p>
                             <p>
-                                В нашем портфолио успешные истории создания собственных продуктов: «Помощник арбитражного
-                                управляющего», F-анализ, HUDWAY, а также десятки сложных заказных веб-сервисов для клиентов
-                                со всего мира.
+                                В нашем портфолио успешные истории создания собственных продуктов: «Помощник арбитражного управляющего», F-анализ, HUDWAY, а также десятки сложных заказных веб-сервисов для клиентов со всего мира.
                             </p>
                         </div>
                     </div>
@@ -53,53 +49,34 @@ CModule::IncludeModule("iblock");
                             </div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about3.jpg">
-                                <img src="/upload/images/item/about3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about4.jpg">
-                                <img src="/upload/images/item/about4.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="item">
                             <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about13.jpg">
                                 <img src="/upload/images/item/about13.jpg" alt="">
                             </div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about5.jpg"><img
-                                        src="/upload/images/item/about5.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about5.jpg"><img src="/upload/images/item/about5.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about6.jpg"><img
-                                        src="/upload/images/item/about6.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about6.jpg"><img src="/upload/images/item/about6.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about7.jpg"><img
-                                        src="/upload/images/item/about7.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about7.jpg"><img src="/upload/images/item/about7.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about8.jpg"><img
-                                        src="/upload/images/item/about8.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about8.jpg"><img src="/upload/images/item/about8.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about9.jpg"><img
-                                        src="/upload/images/item/about9.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about9.jpg"><img src="/upload/images/item/about9.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about10.jpg"><img
-                                        src="/upload/images/item/about10.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about10.jpg"><img src="/upload/images/item/about10.jpg" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about11.JPG"><img
-                                        src="/upload/images/item/about11.JPG" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about11.JPG"><img src="/upload/images/item/about11.JPG" alt=""></div>
                         </div>
                         <div class="item">
-                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about12.jpg"><img
-                                        src="/upload/images/item/about12.jpg" alt=""></div>
+                            <div id="openNewScreen" data-title="фото" data-link="/upload/images/item/about12.jpg"><img src="/upload/images/item/about12.jpg" alt=""></div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -112,20 +89,15 @@ CModule::IncludeModule("iblock");
                 <div class="s_container">
                     <div class="about_text">
                         <p class="about_text_p">
-                            Сегодня в нашей команде 60 профеессионалов: опытные разработчики, тестировщики, проектные
-                            менеджеры, менеджеры по продажам и другие специалисты.
+                            Сегодня в нашей команде 60 профеессионалов: опытные разработчики, тестировщики, проектные менеджеры, менеджеры по продажам и другие специалисты.
                         </p>
                         <p class="about_text_p">
-                            Мы ценим каждого сотрудника и строим планы опираясь на людей - на их профессиональные качества,
-                            навыки и умения. Политика компании - дать возможность каждому сотруднику развивать свои
-                            профессиональные таланты!
-                            И мы всегда рады принять хороших специалистов в нашу дружную команду!
+                            Мы ценим каждого сотрудника и строим планы опираясь на людей - на их профессиональные качества, навыки и умения. Политика компании - дать возможность каждому сотруднику развивать свои профессиональные таланты! И мы всегда рады принять хороших специалистов в нашу дружную команду!
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="short_info">
             <div class="container">
                 <div class="row short_info_list around-xs">
@@ -135,21 +107,18 @@ CModule::IncludeModule("iblock");
                             <p class="card_text">сотрудников</p>
                         </div>
                     </div>
-
                     <div class="card_body_c" id="card_body_2">
                         <div id="card_body_2_text" class="card_body_texts">
                             <div class="text_big_2">27,3</div>
                             <p class="card_text">средний возраст</p>
                         </div>
                     </div>
-
                     <div class="card_body_c" id="card_body_3">
                         <div id="card_body_3_text" class="card_body_texts">
                             <div class="text_big_2">98%</div>
                             <p class="card_text">с высшим образованием</p>
                         </div>
                     </div>
-
                     <div class="card_body_c" id="card_body_4">
                         <div id="card_body_4_text" class="card_body_texts">
                             <div class="text_big_2">4.5</div>
@@ -159,7 +128,6 @@ CModule::IncludeModule("iblock");
                 </div>
             </div>
         </section>
-
         <section class="block_content leadership">
             <div class="container">
                 <div class="title">
@@ -224,7 +192,6 @@ CModule::IncludeModule("iblock");
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <section class="block_content company bg-gwhite">
@@ -237,12 +204,10 @@ CModule::IncludeModule("iblock");
                         <div class="social">
                             <a target="_blank" href="https://www.instagram.com/russian_it" class="social_btn"><span
                                         class="social_btn_icon in"></span></a>
-                            <a target="_blank" href="https://www.facebook.com/rusinfotech/?ref=bookmarks"
-                               class="social_btn"><span class="social_btn_icon fb"></span></a>
+                            <a target="_blank" href="https://www.facebook.com/rusinfotech/?ref=bookmarks" class="social_btn"><span class="social_btn_icon fb"></span></a>
                             <a target="_blank" href="https://vk.com/rit_soft" class="social_btn"><span
                                         class="social_btn_icon vk"></span></a>
                         </div>
-
                     </div>
                     <?
                     $vacancies = 0;
@@ -252,24 +217,21 @@ CModule::IncludeModule("iblock");
                         $vacancies++;
                     }
                     ?>
-                    <div class="card rows m_column vacancy">
-                        <div class="title_block">
-                            <h3>Вакансии</h3>
+                        <div class="card rows m_column vacancy">
+                            <div class="title_block">
+                                <h3>Вакансии</h3>
+                            </div>
+                            <div class="vacancy_info">
+                                <p>Сейчас открыто
+                                    <? echo $vacancies . ' ' . declension_words($vacancies, Array('вакансия', 'вакансии', 'вакансий')); ?>
+                                        .</p>
+                            </div>
+                            <a href="/vacancies" class="btn btn-outline">Подробнее</a>
                         </div>
-                        <div class="vacancy_info">
-                            <p>Сейчас
-                                открыто <? echo $vacancies . ' ' . declension_words($vacancies, Array('вакансия', 'вакансии', 'вакансий')); ?>
-                                .</p>
-                        </div>
-                        <a href="/vacancies" class="btn btn-outline">Подробнее</a>
-
-                    </div>
                 </div>
             </div>
         </section>
     </div>
-
-
     <!-- Скриншоты модальное окно -->
     <div class="modal newMedia" id="newScreen">
         <div class="modal_shadow" data-name="newScreen">
@@ -291,7 +253,8 @@ CModule::IncludeModule("iblock");
             </div>
         </div>
         <div class="modal_dialog">
-            <div class="title"><h3>Скриншоты</h3></div>
+            <div class="title">
+                <h3>Скриншоты</h3></div>
             <div class="modal_content no-padding">
                 <div class="modal_header">
                 </div>
@@ -320,7 +283,8 @@ CModule::IncludeModule("iblock");
             </div>
         </div>
         <div class="modal_dialog">
-            <div class="title"><h3>Обзор сервиса</h3></div>
+            <div class="title">
+                <h3>Обзор сервиса</h3></div>
             <div class="modal_content no-padding">
                 <div class="modal_header">
                 </div>
@@ -329,5 +293,4 @@ CModule::IncludeModule("iblock");
             </div>
         </div>
     </div>
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+    <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
