@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Помошник арбитражного управляющего");
+$APPLICATION->SetTitle("Помощник арбитражного управляющего");
 CModule::IncludeModule("iblock");
 ?>
     <!-- Информация о продукте / главный слайд -->
@@ -64,6 +64,7 @@ CModule::IncludeModule("iblock");
             </div>
         </div>
     </section>
+
     <!-- Цены -->
     <section class="block_content prices" id="prices">
         <div class="container">

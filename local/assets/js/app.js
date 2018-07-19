@@ -505,24 +505,30 @@ $('.menu_top .close').on('click', function() {
 
 
 
-// Шапка сайта
+// Шапка сайта2
 function initHeader() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
         point_fade = 40,
         panel_h = $('#panel').height(),
-        main_h = 133,
+        main_h = 133, // развернутое состояние
+        main_hmin = 80, // свернутое состояние
         slider_h = $('.slider').height(),
         $main = $('.header.header_main'),
         $product = $('.header.header_product'),
         isDesktop = s_w > 768;
     if(isDesktop) {
-        point_fade = 0;
+        main_h = 133;
+        main_hmin = 80;
+    } else {
+        main_h = 100;
+        main_hmin = 68;
     }
-    point_fade = 133 - 80 + panel_h;
+    console.log($main.attr('class'));
+    point_fade = main_h - main_hmin + panel_h;
     if($main.hasClass('h-slide') || isMainSlider) {
         isMainSlider = true;
-        if(top+main_h > panel_h) {
+        if(top > point_fade) {
             $main.removeClass('h-slide');
             $main.addClass('h-top');
         } else {
@@ -531,16 +537,15 @@ function initHeader() {
         }
     }
 
+
     if(top > point_fade) {
-        main_h = 80;
         var tt = panel_h - top;
         if(tt < 0) {
             tt = 0;
         }
-        $main.css({'height': main_h+'px', 'top' : tt+'px'});
-        $product.css({'top': tt+main_h+'px'});
+        $main.css({'height': main_hmin+'px', 'top' : tt+'px'});
+        $product.css({'top': tt+main_hmin+'px'});
     } else {
-        main_h = 133;
         var tt = panel_h - top;
         if(tt < 0) {
             tt = 0;
@@ -556,6 +561,8 @@ $(document).on('scroll', function() {
 
 
 // Init functions
-initHeader();
+$(document).ready(function() {
+    initHeader();
+});
 
 },{}]},{},[1])

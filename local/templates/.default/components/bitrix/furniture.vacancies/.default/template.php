@@ -13,12 +13,18 @@
 				<div class="toggle_body_text text">
 					<?=$val['PREVIEW_TEXT']?>
 					<?=$val['DETAIL_TEXT']?>
-					<button class="btn btn-blue" data-title="<?=$val['NAME']?>"
-						 id="openNewHire"><?=GetMessage('VCN_BTN')?></button>
-					<p class="text_info_btn">
-						<?=GetMessage('VCN_TO_EMAIL')?> 
-						<a href="#">hr@russianit.ru</a>
-					</p>
+					<div class="row middle-xs">
+						<div class="col-xs-12 col-md">
+							<button class="btn btn-blue btn_hire" data-title="<?=$val['NAME']?>"
+								 id="openNewHire"><?=GetMessage('VCN_BTN')?></button>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<p class="text_info_btn nopadding">
+								<?=GetMessage('VCN_TO_EMAIL')?> 
+								<a href="mailto:hr@russianit.ru">hr@russianit.ru</a>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

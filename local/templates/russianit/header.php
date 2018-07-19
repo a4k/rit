@@ -29,13 +29,13 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
         <? if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?>
             <div class="header-fantom header_main"></div>
             <header class="header fix-header header_main h-slide">
-        <?else : ?>
+        <? else : ?>
             <div class="header-fantom visible header_main"></div>
             <header class="header fix-header header_main h-top">
         <?endif?>
             <div class="container">
                 <div class="menu row between-xs middle-xs">
-                    <div class="logo_area col-xs">
+                    <div class="logo_area row middle-xs col-xs">
                         <a href="/">
                             <div class="logo">
                                 <!-- <img src="images/logo.png" class="holder_image"> -->

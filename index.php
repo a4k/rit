@@ -275,7 +275,7 @@ CModule::IncludeModule("iblock");
                                     <? echo $vacancies . ' ' . declension_words($vacancies, Array('вакансия', 'вакансии', 'вакансий')); ?>
                                         .</p>
                             </div>
-                            <a href="/about/vacancies" class="btn btn-outline">Подробнее</a>
+                            <a href="/about/vacancies" class="btn btn-lblue-outline">Подробнее</a>
                         </div>
                 </div>
             </div>

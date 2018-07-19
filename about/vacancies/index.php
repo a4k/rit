@@ -188,7 +188,7 @@ $APPLICATION->SetTitle("Вакансии");
 							<div class="manager">
 								<p><span class="text_bold">Рябчикова <br>Анна</span></p>
 								<p class="small_text manager_info">hr-менеджер<br/></p>
-								<img src="/upload/images/" class="manager_photo" alt="">
+								<img src="/upload/images/hr_manager.jpg" class="manager_photo" alt="">
 								<p class="small_text manager_voice">«Свяжусь с вами <br>в течение рабочего <br>дня»</p>
 							</div>
 						</div>

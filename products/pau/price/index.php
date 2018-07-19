@@ -31,7 +31,7 @@ $APPLICATION->SetTitle("Стоимость и тарифы");
 						<div class="price_item_info">Собрание кредиторов, комитета кредиторов</div>
 						<div class="price_item_info">Взаимодействие с сайтами ЕФРСБ и Арбитр из программы</div>
 						<div class="price_item_info">Поиск контрагентов по онлайн-базе Аналитикс</div>
-						<div class="price_item_info">Бизнес-справки (оплачиваются отдельно)</div>
+						<div class="price_item_info"><a href="https://probili.ru/" class="link" target="_blank">Бизнес-справки (оплачиваются отдельно)</a></div>
 						<div class="price_item_info">Экспорт и импорт данных из MS Excel и 1С v7.7</div>
 						<div class="price_item_info">Экспорт и импорт процедур</div>
 						<div class="price_item_info">Раздел Бюджет</div>
