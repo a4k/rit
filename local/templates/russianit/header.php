@@ -26,8 +26,13 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
 
     <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
     <div class="main_container" id="<? $APPLICATION->ShowProperty("id") ?>">
-        <div class="header-fantom header_main"></div>
-        <header class="header header_main h-top">
+        <? if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?>
+            <div class="header-fantom header_main"></div>
+            <header class="header fix-header header_main h-slide">
+        <?else : ?>
+            <div class="header-fantom visible header_main"></div>
+            <header class="header fix-header header_main h-top">
+        <?endif?>
             <div class="container">
                 <div class="menu row between-xs middle-xs">
                     <div class="logo_area col-xs">
@@ -128,9 +133,9 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
                     <? endif ?>
                         
                     <!-- Шапка продукта -->
-                    <div class="header-fantom header_product">
+                    <div class="header-fantom visible header_product">
                     </div>
-                    <div class="header header_product h-top">
+                    <div class="header fix-header header_product h-top">
                         <div class="container">
                             <div class="menu row between-xs middle-xs">
                                 <div class="logo_area col-xs-12 col-md center-xs start-md">

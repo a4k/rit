@@ -20,6 +20,7 @@ $WRAPPER = $arParams['CLASS_WRAPPER'];
 $ITEM = $arParams['CLASS_ITEM']; // класс элемента
 $SLIDER_ID = $arParams['SLIDER_ID']; // id слайдера
 $DATA_VIEW = $arParams['DATA_VIEW']; // количество элементов на экране
+$ARROWS_SHOW = $arParams['ARROWS_SHOW']; // показывать переключатели
 if(!isset($ITEM)) {
     $ITEM = 'item';
 }
@@ -39,8 +40,9 @@ if(!isset($ITEM)) {
                 // Поля для работы с слайдом
                 $button_title = $arItem['PROPERTIES']['button_title']['VALUE']; // Название на кнопке
                 $link = $arItem['PROPERTIES']['link']['VALUE']; // Ссылка в слайде
-                $code = $arItem['PROPERTIES']['code']['VALUE']; // Код слайда
-                $description = $arItem['PREVIEW_TEXT']['SRC']; // Описание в слайде
+                $show_code = $arItem['PROPERTIES']['show_code']['VALUE_XML_ID']; // Показывать код слайда
+                $code = $arItem['PROPERTIES']['code']['VALUE']['TEXT']; // Код слайда
+                $description = $arItem['DETAIL_TEXT']; // Описание в слайде
                 $title = $arItem['NAME']; // Название слайда
                 $picture_preview = $arItem['PREVIEW_PICTURE']['SRC']; // Маленькая картинка
                 $picture_detail = $arItem['DETAIL_PICTURE']['SRC']; // Большая картинка
@@ -48,8 +50,9 @@ if(!isset($ITEM)) {
             ?>
 
             <?if($SLIDER_ID == 'main_screens'):?>
-                <li class="slide">
-                    <?if(isset($code)): ?>
+                <div class="<?echo $ITEM?>">
+                    <!-- <?print_r($arItem['PROPERTIES']['code'])?> -->
+                    <?if($show_code == '111'): ?>
                         <?echo $code?>
                     <?else:?>
                         <div class="slide_photo">
@@ -68,7 +71,7 @@ if(!isset($ITEM)) {
                         </div>
                     
                     <?endif?>
-                </li>
+                </div>
 
             <?else:?>
                 <div class="<?echo $ITEM?>">
@@ -79,4 +82,14 @@ if(!isset($ITEM)) {
             <?endif?>
         <?endforeach;?>
     </div>
+    <?if($ARROWS_SHOW == 'Y'): ?>
+        <div class="arrow_left"></div>
+        <div class="arrow_right"></div>
+        <div class="arrows">
+            <div class="sel"></div>
+            <div class="sel active"></div>
+            <div class="sel"></div>
+            <div class="sel"></div>
+        </div>
+    <?endif?>
 </div>

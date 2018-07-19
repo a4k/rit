@@ -76,8 +76,8 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
 
     <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
     <div class="main_container" id="<? $APPLICATION->ShowProperty("id") ?>">
-        <div class="header-fantom header_main"></div>
-        <header class="header header_main h-top">
+        <div class="header-fantom visible header_main"></div>
+        <header class="header fix-header header_main h-top">
             <div class="container">
                 <div class="menu row between-xs middle-xs">
                     <div class="logo_area col-xs">

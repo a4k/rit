@@ -60,32 +60,11 @@ $APPLICATION->SetTitle("F-анализ");
             <div class="title">
                 <h3>Цены</h3>
             </div>
-            <div class="row center-xs">
-                <div class="price_block row center-xs">
-                    <div class="col-xs-12 col-md-6 item center-xs">
-                        <p>
-                            Стоимость программы <b>на 1 рабочее место:</b>
-                        </p>
-                        <div class="title_big">
-                            7450 Р
-                        </div>
-                        <div class="info_column col-xs-12 center-xs start-md col-md block_buy_btn">
-                            <a href="http://rsit.ru/buy/product/fa/" target="_blank" class="btn btn-green-outline">Купить</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-6 item center-xs">
-                        <p>
-                            Стоимость дополнительного рабочего места:
-                        </p>
-                        <div class="title_big">
-                            2500 Р
-                        </div>
-                        <div class="info_column col-xs-12 center-xs start-md col-md block_buy_btn">
-                            <a href="http://rsit.ru/buy/product/fa/" target="_blank" class="btn btn-green-outline">Купить</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <?
+                    $APPLICATION->IncludeFile($APPLICATION->GetCurDir().'sect_prices.php', Array(), Array(
+                        "NAME"      => "цены", 
+                    ));
+                ?>
         </div>
     </section>
     <!-- О программе -->
@@ -155,20 +134,11 @@ $APPLICATION->SetTitle("F-анализ");
                     <h4>Примеры сформированных отчетов в F-анализе</h4>
                 </div>
                 <div class="s_container">
-                    <div class="reports_block row center-xs">
-                        <div class="col-xs-12 col-md-6 item">
-                            <a href="/upload/docs/analys_fanalys.pdf" target="_blank" class="link">Анализ финансового состояния</a>
-                            <p>
-                                pdf, 1.2 Мб
-                            </p>
-                        </div>
-                        <div class="col-xs-12 col-md-6 item">
-                            <a href="/upload/docs/bancrot_fanalys.pdf" target="_blank" class="link">Заключение о наличии (отсутствии) признаков фиктивного и преднамеренного банкроства </a>
-                            <p>
-                                pdf, 0.5 Мб
-                            </p>
-                        </div>
-                    </div>
+                    <?
+                        $APPLICATION->IncludeFile($APPLICATION->GetCurDir().'sect_reports.php', Array(), Array(
+                            "NAME"      => "отчеты", 
+                        ));
+                    ?>
                 </div>
             </div>
         </div>
@@ -433,15 +403,12 @@ $APPLICATION->SetTitle("F-анализ");
                             В центре загрузки вы можете скачать актуальные версии программных продуктов и обновления.
                         </p>-->
                             <p>
-                                Версия 1.3
-                                <br> выпущена 13 июня 2018
-                            </p>
-                            <p>
-                                <a href="http://files.rsit.ru/ama/fa-setup-pro-1.3.0.0.exe">Скачать установочный файл</a>, exe, 12,8 Мб
+                                Версия 1.3<br>
+                                Выпущена 13 июня 2018
                             </p>
                         </div>
                         <div class="item_footer">
-                            <!--<a href="http://rsit.ru/" target="_blank" class="link_btn">Перейти в ЦЕНТР ЗАГРУЗОК &gt;</a>-->
+                            <a href="http://files.rsit.ru/ama/fa-setup-pro-1.3.0.0.exe" target="_blank" class="link_btn">Скачать установочный файл</a>
                         </div>
                     </div>
                 </div>
@@ -474,47 +441,23 @@ $APPLICATION->SetTitle("F-анализ");
             </div>
         </div>
     </section>
+
+    <!-- Документы -->
     <section class="documents" id="documents">
         <div class="container">
             <div class="title">
                 <h3>Документы</h3>
             </div>
-            <div class="row docs_list">
-                <div class="item col-xs-12 col-md-5">
-                    <div class="title">
-                        <h4>Договоры</h4>
-                    </div>
-                    <div class="doc_links">
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analys/licenzionnyj_dogovor.doc" target="_blank">Лицензионный договор </a>
-                        </div>
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analys/dogovor_na_okazanie_uslug_po_tekhnicheskoj_podderzhke.doc" target="_blank">Договор на оказание услуг по технической поддержке</a>
-                        </div>
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analys/dogovor_na_okazanie_uslug_po_razovomu_obnovleniyu.doc" target="_blank">Договор на оказание услуг по разовому обновлению</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item col-xs-12 col-md-4">
-                    <div class="title">
-                        <h4>Оферты</h4>
-                    </div>
-                    <div class="doc_links">
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analiz publichnaya_oferta_programma.pdf" target="_blank">Публичная оферта</a>
-                        </div>
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analiz publichnaya_oferta_teh.pdf" target="_blank">Публичная оферта на техническую поддержку</a>
-                        </div>
-                        <div class="doc_link">
-                            <a href="/upload/docs/f-analiz publichnaya_oferta_razovaya.pdf" target="_blank">Публичная оферта на разовое обновление</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?
+                $APPLICATION->IncludeFile($APPLICATION->GetCurDir().'sect_documents.php', Array(), Array(
+                    "NAME"      => "документы", 
+                ));
+            ?>
+            
         </div>
     </section>
+
+
     <!-- Отправить заявку модальное окно -->
     <div class="modal modal_size_small" id="newRequest">
         <div class="modal_shadow" data-name="newRequest">

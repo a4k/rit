@@ -485,7 +485,11 @@ $('#screens').each(function() {
 });
 
 
+var isMainSlider = false; // Есть главный слайдер
 var $topE = 0; // Высота прокрутки
+
+
+
 $('.menu_mobile').on('click', function() {
     $('.menu_top').show();
     $('body').css({'overflow': 'hidden'});
@@ -500,30 +504,58 @@ $('.menu_top .close').on('click', function() {
 });
 
 
-$(document).on('scroll', function() {
+
+// Шапка сайта
+function initHeader() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
         point_fade = 40,
+        panel_h = $('#panel').height(),
+        main_h = 133,
+        slider_h = $('.slider').height(),
+        $main = $('.header.header_main'),
+        $product = $('.header.header_product'),
         isDesktop = s_w > 768;
     if(isDesktop) {
-        point_fade = 40;
+        point_fade = 0;
     }
+    point_fade = 133 - 80 + panel_h;
+    if($main.hasClass('h-slide') || isMainSlider) {
+        isMainSlider = true;
+        if(top+main_h > panel_h) {
+            $main.removeClass('h-slide');
+            $main.addClass('h-top');
+        } else {
+            $main.addClass('h-slide');
+            $main.removeClass('h-top');
+        }
+    }
+
     if(top > point_fade) {
-        $('.header.header_main').addClass('fix-header');
-        $('.header_main.header-fantom').addClass('visible');
-        if(isDesktop) {
-            $('.header.header_product').addClass('fix-header');
-            $('.header_product.header-fantom').addClass('visible');
+        main_h = 80;
+        var tt = panel_h - top;
+        if(tt < 0) {
+            tt = 0;
         }
+        $main.css({'height': main_h+'px', 'top' : tt+'px'});
+        $product.css({'top': tt+main_h+'px'});
     } else {
-        $('.header.header_main').removeClass('fix-header');
-        $('.header_main.header-fantom').removeClass('visible');
-        if(isDesktop) {
-            $('.header.header_product').removeClass('fix-header');
-            $('.header_product.header-fantom').removeClass('visible');
+        main_h = 133;
+        var tt = panel_h - top;
+        if(tt < 0) {
+            tt = 0;
         }
+        $main.css({'height': main_h+'px', 'top' : tt+'px'});
+        $product.css({'top': tt+main_h+'px'});
     }
+}
+
+$(document).on('scroll', function() {
+    initHeader();
 });
 
+
+// Init functions
+initHeader();
 
 },{}]},{},[1])

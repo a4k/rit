@@ -267,7 +267,10 @@ $APPLICATION->SetTitle("Стоимость и тарифы");
 									</div>
 									<div class="row title_item">
 										<div class="title_item_name start-xs col-xs-11">Количество рабочих мест</div>
-										<div class="title_item_info end-xs col-xs-1">3</div>
+										<div class="title_item_info end-xs col-xs-1">
+											<span data-price="price_1">3</span>
+											<span data-price="price_2" class="hidden">1</span>
+										</div>
 									</div>
 									<div class="row title_item">
 										<div class="title_item_name start-xs col-xs-11">Сопровождение всех процедур банкротства,<br/>
@@ -386,7 +389,8 @@ $APPLICATION->SetTitle("Стоимость и тарифы");
 									1
 								</div>
 								<div class="price_box_item">
-									3
+										<span data-price="price_1">3</span>
+										<span data-price="price_2" class="hidden">1</span>
 								</div>
 								<div class="price_box_item">
 									<div class="checked"></div>
@@ -834,7 +838,7 @@ $APPLICATION->SetTitle("Стоимость и тарифы");
 			<div class="about s_container">
 				<div class="text text_center">
 					<p>Внимание! Приобрести техническую поддержку можно только если у пользователя установлена последняя или предпоследняя версия программы.<br/>
-					Стоимость технической поддержки вычисляется как процент от <span class="link"
+					Стоимость технической поддержки вычисляется как процент от <span class="link_tooltip"
 					 data-tooltip="В стоимость комплектации программы входит стоимость программы, дополнительных
 					  арбитражных управляющих и дополнительных рабочих мест. Для версии Управляющая компания не
 					   менее 42 000 руб., для версии Профессионал не менее 8 280 руб., для версии Лайт не менее 5 900 руб."

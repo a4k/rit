@@ -166,7 +166,7 @@ CModule::IncludeModule("iblock");
                 <div class="title">
                     <h3>Руководство</h3>
                 </div>
-                <div class="row liders_list around-xs">
+                <div class="row liders_list center-xs">
                     <div class="item col-xs-12 center-xs col-sm start-sm">
                         <div class="item_photo">
                             <img src="/upload/images/photo/klabukov.jpg">
@@ -204,7 +204,22 @@ CModule::IncludeModule("iblock");
                     </div>
                     <div class="item col-xs-12 center-xs col-sm start-sm">
                         <div class="item_photo">
-                            <img src="/upload/images/photo/kravcov.jpg" alt="">
+                            <img src="/upload/images/photo/it.jpg" alt="">
+                        </div>
+                        <div class="item_body">
+                            <div class="title_block_bold">
+                                <h4>Олег Кравцов</h4>
+                            </div>
+                            <p>Руководитель отдела веб-разработки</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row liders_list center-xs">
+                    <div class="item col-xs-12 center-xs col-sm start-sm">
+                        <div class="item_photo">
+                            <img src="/upload/images/photo/it.jpg" alt="">
                         </div>
                         <div class="item_body">
                             <div class="title_block_bold">
@@ -220,6 +235,17 @@ CModule::IncludeModule("iblock");
                         <div class="item_body">
                             <div class="title_block_bold">
                                 <h4>Кирилл Фролов</h4>
+                            </div>
+                            <p>Руководитель отдела мобильной разработки</p>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 center-xs col-sm start-sm">
+                        <div class="item_photo">
+                            <img src="/upload/images/photo/dk.jpg" alt="">
+                        </div>
+                        <div class="item_body">
+                            <div class="title_block_bold">
+                                <h4>Денис Кравцов</h4>
                             </div>
                             <p>Руководитель отдела мобильной разработки</p>
                         </div>

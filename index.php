@@ -38,7 +38,7 @@ CModule::IncludeModule("iblock");
                     "FIELD_CODE" => array(
                         "DETAIL_PICTURE",
                         "PREVIEW_PICTURE",
-                        "PREVIEW_TEXT",
+                        "DETAIL_TEXT",
                     ),
                     "FILTER_NAME" => "",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
@@ -61,6 +61,7 @@ CModule::IncludeModule("iblock");
                     "PROPERTY_CODE" => array(
                         "button_title",
                         "link",
+                        "show_code",
                         "code",
                     ),
                     "SET_BROWSER_TITLE" => "Y",
@@ -80,33 +81,11 @@ CModule::IncludeModule("iblock");
                     "CLASS_INNER" => "slider_inner",
                     "CLASS_WRAPPER" => "slider_wrapper items",
                     "CLASS_ITEM" => "slide",
+                    "ARROWS_SHOW" => "Y", // Показывать переключатели
                 ),
                 false
             ); ?>
-            <div class="slider_inner sinner" data-view="1">
-                <ul class="slider_wrapper items swrapper owl-carousel">
-                    <li class="slide" data-slide="1">
-                        <div class="slide_photo">
-                            <a href="/products/pau/events/2143" class="slide_link">
-                                <div class="slide_photo_img" style="">
-                                </div>
-                            </a>
-                            <div class="container slide_info">
-                                <a href="/products/pau/events/2143/" class="btn btn-lblue-outline btn-lblue-big">Подробнее</a>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <div class="arrow_left"></div>
-                <div class="arrow_right"></div>
-                <div class="arrows">
-                    <div class="sel"></div>
-                    <div class="sel active"></div>
-                    <div class="sel"></div>
-                    <div class="sel"></div>
-                </div>
-            </div>
+            
         </section>
         <!-- Продукты -->
         <section id="main_products" class="block_content products">
