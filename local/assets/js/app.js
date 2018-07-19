@@ -37,7 +37,7 @@ $('[data-tooltip]').hover(function() {
 
 
 // Разовое обновление
-$('#moreUpdate').click(function(e) {
+$('#moreUpdate').click(function() {
     $('#newUpdate').fadeIn();
     return false;
 });
@@ -65,7 +65,6 @@ $('#button_request').click(function() {
 
 // Закрытие модального окна
 $('.modal').find('.close, .modal_shadow, #close').click(function(){
-    console.log('test');
     var name = $(this).attr('data-name');
     $('#'+name).fadeOut();
     $('body').removeClass('modal-open');
@@ -73,6 +72,16 @@ $('.modal').find('.close, .modal_shadow, #close').click(function(){
     // console.log($(this))
     return false;
 });
+
+$(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+        // Пользователь нажал ESC
+        $('.modal').fadeOut(); // Закрываем все открытые окна
+        $('body').removeClass('modal-open');
+        $('#panel').show();
+    }
+});
+
 // Открытие окна с Вакансиями
 $('body').find('[id=openNewHire]').click(function(){
     var title = $(this).attr('data-title');
@@ -453,7 +462,11 @@ $('#screens').each(function() {
             autoWidth: true,
             autoplay: true,
             items: 3,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
         });
+        $wrapper.trigger('play.owl.autoplay',[5000]);
     } else {
         $wrapper.owlCarousel({
             loop:true,
@@ -462,7 +475,11 @@ $('#screens').each(function() {
             nav:false,
             autoWidth: true,
             items: 3,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
         });
+        $wrapper.trigger('play.owl.autoplay',[5000]);
     }
 
 });
@@ -477,7 +494,6 @@ $('.menu_mobile').on('click', function() {
 $('.menu_top .close').on('click', function() {
     $('.menu_top').hide();
     $('body').css({'overflow':'auto'});
-    console.log($topE);
     $('html, body').animate({
         scrollTop: $topE
     }, 0);
@@ -487,10 +503,10 @@ $('.menu_top .close').on('click', function() {
 $(document).on('scroll', function() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
-        point_fade = 200,
+        point_fade = 40,
         isDesktop = s_w > 768;
     if(isDesktop) {
-        point_fade = 500;
+        point_fade = 40;
     }
     if(top > point_fade) {
         $('.header.header_main').addClass('fix-header');

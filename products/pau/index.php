@@ -318,7 +318,7 @@ CModule::IncludeModule("iblock");
                 </div>
             </div>
             <div class="text_center all_prices_out">
-                <a href="/pau/price" class="all_prices">Все тарифы и стоимость</a>
+                <a href="/products/pau/price" class="all_prices">Стоимость</a>
             </div>
         </div>
     </section>
@@ -462,40 +462,76 @@ CModule::IncludeModule("iblock");
             <div class="title">
                 <h4>Снимки экрана</h4>
             </div>
-            <div class="qslider screen_list sinner" id="screens" data-view="3">
-                <div class="swrapper owl-carousel">
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Раздел собрания" data-link="/upload/images/item/1pay_skrin.png">
-                            <img src="/upload/images/item/1pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Финансовый анализ" data-link="/upload/images/item/2pay_skrin.png">
-                            <img src="/upload/images/item/2pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Регистрация требований" data-link="/upload/images/item/5pay_skrin.png">
-                            <img src="/upload/images/item/5pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Раздел Доходы/Расходы" data-link="/upload/images/item/4pay_skrin.png">
-                            <img src="/upload/images/item/4pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Раздел Доходы/Расходы" data-link="/upload/images/item/3pay_skrin.png">
-                            <img src="/upload/images/item/3pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div id="openNewScreen" data-title="Финансовый анализ" data-link="/upload/images/item/6pay_skrin.png">
-                            <img src="/upload/images/item/6pay_skrin.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+             <? $APPLICATION->IncludeComponent(
+    "bitrix:news.list", 
+    "screens", 
+    array(
+        "ACTIVE_DATE_FORMAT" => "j F Y",
+        "ADD_SECTIONS_CHAIN" => "Y",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "N",
+        "CHECK_DATES" => "Y",
+        "COMPONENT_TEMPLATE" => "screens",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "Y",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array(
+            "DETAIL_PICTURE",
+            "PREVIEW_PICTURE",
+        ),
+        "FILTER_NAME" => "",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "7",
+        "IBLOCK_TYPE" => "pau",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "30",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Новости",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "",
+        ),
+        "SET_BROWSER_TITLE" => "Y",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "Y",
+        "SET_META_KEYWORDS" => "Y",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SORT_BY1" => "TIMESTAMP_X",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "N",
+        "SLIDER_ID" => "screens", // id нашего слайдера
+        "DATA_VIEW" => "3",
+        "CLASS_INNER" => "qslider screen_list",
+        "CLASS_WRAPPER" => "",
+    ),
+    false
+); ?>
+            
         </div>
     </section>
     <!-- Технические требования -->

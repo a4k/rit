@@ -11,17 +11,92 @@ CModule::IncludeModule("iblock");
     <div id="index">
         <!-- Слайдер -->
         <section class="slider">
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:news.list", 
+                "screens", 
+                array(
+                    "ACTIVE_DATE_FORMAT" => "j F Y",
+                    "ADD_SECTIONS_CHAIN" => "Y",
+                    "AJAX_MODE" => "N",
+                    "AJAX_OPTION_ADDITIONAL" => "",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_STYLE" => "Y",
+                    "CACHE_FILTER" => "N",
+                    "CACHE_GROUPS" => "Y",
+                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "N",
+                    "CHECK_DATES" => "Y",
+                    "COMPONENT_TEMPLATE" => "screens",
+                    "DETAIL_URL" => "",
+                    "DISPLAY_BOTTOM_PAGER" => "Y",
+                    "DISPLAY_DATE" => "Y",
+                    "DISPLAY_NAME" => "Y",
+                    "DISPLAY_PICTURE" => "Y",
+                    "DISPLAY_PREVIEW_TEXT" => "Y",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "FIELD_CODE" => array(
+                        "DETAIL_PICTURE",
+                        "PREVIEW_PICTURE",
+                        "PREVIEW_TEXT",
+                    ),
+                    "FILTER_NAME" => "",
+                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                    "IBLOCK_ID" => "10",
+                    "IBLOCK_TYPE" => "main",
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "INCLUDE_SUBSECTIONS" => "Y",
+                    "MESSAGE_404" => "",
+                    "NEWS_COUNT" => "30",
+                    "PAGER_BASE_LINK_ENABLE" => "N",
+                    "PAGER_DESC_NUMBERING" => "N",
+                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                    "PAGER_SHOW_ALL" => "N",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_TEMPLATE" => ".default",
+                    "PAGER_TITLE" => "Новости",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "PREVIEW_TRUNCATE_LEN" => "",
+                    "PROPERTY_CODE" => array(
+                        "button_title",
+                        "link",
+                        "code",
+                    ),
+                    "SET_BROWSER_TITLE" => "Y",
+                    "SET_LAST_MODIFIED" => "N",
+                    "SET_META_DESCRIPTION" => "Y",
+                    "SET_META_KEYWORDS" => "Y",
+                    "SET_STATUS_404" => "N",
+                    "SET_TITLE" => "N",
+                    "SHOW_404" => "N",
+                    "SORT_BY1" => "TIMESTAMP_X",
+                    "SORT_BY2" => "SORT",
+                    "SORT_ORDER1" => "DESC",
+                    "SORT_ORDER2" => "ASC",
+                    "STRICT_SECTION_CHECK" => "N",
+                    "SLIDER_ID" => "main_screens", // id нашего слайдера
+                    "DATA_VIEW" => "1",
+                    "CLASS_INNER" => "slider_inner",
+                    "CLASS_WRAPPER" => "slider_wrapper items",
+                    "CLASS_ITEM" => "slide",
+                ),
+                false
+            ); ?>
             <div class="slider_inner sinner" data-view="1">
                 <ul class="slider_wrapper items swrapper owl-carousel">
                     <li class="slide" data-slide="1">
                         <div class="slide_photo">
-                            <div class="slide_photo_img" style="">
+                            <a href="/products/pau/events/2143" class="slide_link">
+                                <div class="slide_photo_img" style="">
+                                </div>
+                            </a>
+                            <div class="container slide_info">
+                                <a href="/products/pau/events/2143/" class="btn btn-lblue-outline btn-lblue-big">Подробнее</a>
                             </div>
                         </div>
-                        <div class="container slide_info">
-                            <a href="/products/pau/events/2143" target="_blank" class="btn btn-lblue-outline btn-lblue-big">Подробнее</a>
-                        </div>
                     </li>
+
                 </ul>
                 <div class="arrow_left"></div>
                 <div class="arrow_right"></div>
@@ -41,7 +116,7 @@ CModule::IncludeModule("iblock");
                 </div>
                 <div class="items_inner">
                     <div class="cards product-cards s-color ct_3 ctm_1 cts_1">
-                        <div class="card slide" data-color="#E96060" data-tcolor="#fff">
+                        <div class="card slide" data-product="pau" data-color="#5D5A57" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-pau.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>Помощник арбитражного управляющего</a></h5>
@@ -51,7 +126,7 @@ CModule::IncludeModule("iblock");
                             </div>
                             <a href="/products/pau" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-product="hudway" data-color="#4690CD" data-tcolor="#fff">
+                        <div class="card slide" data-product="hudway" data-color="#5D5A57" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-hudway.svg);background-size: auto 54px;background-position: left center;" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>HUDWAY</a></h5>
@@ -61,7 +136,7 @@ CModule::IncludeModule("iblock");
                             </div>
                             <a href="https://hudwayapp.com/ru" target="_blank" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-color="#8BB593" data-tcolor="#fff">
+                        <div class="card slide" data-product="fa" data-color="#5D5A57" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-fa.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>F-анализ</a></h5>
@@ -72,14 +147,14 @@ CModule::IncludeModule("iblock");
                             <a href="/products/fa" class="card_link"><span></span></a>
                         </div>
                         <div class="card slide" data-product="pechat" data-color="#5D5A57" data-tcolor="#fff">
-                            <div style="background-image: url(/upload/images/item/prod-pechat.svg)" class="holder_image card_photo"></div>
+                            <div style="background-image: url(/upload/images/item/prod-pechat.png)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>Печать конвертов</a></h5>
                                 <p class="card_text">Автоматическая печать конвертов, печать реестров, уведомлений, ведение баз данных контрагентов и проведённых рассылок.</p>
                             </div>
                             <a href="http://mnogopisem.ru/" target="_blank" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-product="probili" data-color="#CD4550" data-tcolor="#fff">
+                        <div class="card slide" data-product="probili" data-color="#5D5A57" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-probili.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>Пробили.Ру</a></h5>
@@ -266,12 +341,21 @@ CModule::IncludeModule("iblock");
         display: none
     }
 
+    /* Продукты */
+    .cards.product-cards .card[data-product="pau"]:hover .card_photo {
+        background-image: url(/upload/images/item/prod-pau-h.svg)!important;
+    }
+
     .cards.product-cards .card[data-product="hudway"]:hover .card_photo {
         background-image: url(/upload/images/item/prod-hudway-h.svg)!important;
     }
 
+    .cards.product-cards .card[data-product="fa"]:hover .card_photo {
+        background-image: url(/upload/images/item/prod-fa-h.svg)!important;
+    }
+
     .cards.product-cards .card[data-product="pechat"]:hover .card_photo {
-        background-image: url(/upload/images/item/prod-pechat-h.svg)!important;
+        background-image: url(/upload/images/item/prod-pechat-h.png)!important;
     }
 
     .cards.product-cards .card[data-product="probili"]:hover .card_photo {

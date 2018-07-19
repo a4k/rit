@@ -26,23 +26,7 @@
                         );?>
                     </div>
                 </div>
-                <div class="cards empty_b ct_3">
-                    <div class="card columns">
-                        <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", array(
-                            "ROOT_MENU_TYPE" => "services",
-                            "MENU_CACHE_TYPE" => "Y",
-                            "MENU_CACHE_TIME" => "36000000",
-                            "MENU_CACHE_USE_GROUPS" => "Y",
-                            "MENU_CACHE_GET_VARS" => array(
-                            ),
-                            "MAX_LEVEL" => "1",
-                            "CHILD_MENU_TYPE" => "bottom",
-                            "USE_EXT" => "N",
-                            "ALLOW_MULTI_SELECT" => "N"
-                        ),
-                            false
-                        );?>
-                    </div>
+                <div class="cards empty_b ct_2 ctm_1">
                     <div class="card columns">
                         <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", array(
                             "ROOT_MENU_TYPE" => "support",
