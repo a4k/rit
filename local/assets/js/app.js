@@ -1,12 +1,12 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Toggle меню
-$('[class=toggles]').find('.toggle_btn, h4').click(function(){
+$('[class=toggles]').find('.toggle_btn, h4').click(function() {
     var $parent = $(this).closest('.toggle');
     $parent.toggleClass('opened');
     $parent.find('.toggle_body_text').toggle();
 });
 $('[class=toggles]').find('.toggle').each(function() {
-    if($(this).hasClass('opened')) {
+    if ($(this).hasClass('opened')) {
         $(this).find('.toggle_body_text').show();
     } else {
         $(this).find('.toggle_body_text').hide();
@@ -16,13 +16,13 @@ $('[class=toggles]').find('.toggle').each(function() {
 // Переключение цен
 $('#rates .list_types').find('a').click(function() {
     var id = $(this).attr('data-id');
-    if(id == 'price_1') {
+    if (id == 'price_1') {
         $('[data-coprice="3"]').show();
     } else {
         $('[data-coprice="3"]').hide();
     }
     $('[data-price]').addClass('hidden');
-    $('[data-price='+ id +']').removeClass('hidden');
+    $('[data-price=' + id + ']').removeClass('hidden');
     $(this).parent().find('a').removeClass('noactive');
     $(this).addClass('noactive');
     return false;
@@ -30,10 +30,48 @@ $('#rates .list_types').find('a').click(function() {
 
 $('[data-tooltip]').hover(function() {
     var text = $(this).attr('data-tooltip');
-    $(this).append('<span class="tooltip">'+text+'</span>');
+    $(this).append('<span class="tooltip">' + text + '</span>');
 }, function() {
     $(this).find('.tooltip').remove();
 });
+
+
+
+        // Модальные окна - скриншоты
+        $(function() {
+            $('[data-fancybox]').fancybox({
+                // Options will go here
+                baseClass: 'modal-view-container',
+                thumbs: false,
+                infobar: false,
+                arrows: true,
+                loop: true,
+                zoom: false,
+                btnTpl: {
+                    zoom: '',
+                    close:
+                        '<div data-fancybox-close class="arrow_close" title="{{CLOSE}}"></div>',
+                    arrowLeft:
+                        '<div data-fancybox-prev class="arrow_left">' +
+                            '<div class="arrow_info">' +
+                                '<span class="arrow"></span>' +
+                            '</div>' +
+                        '</div>',
+                    arrowRight:
+                        '<div data-fancybox-prev class="arrow_right">' +
+                            '<div class="arrow_info">' +
+                                '<span class="arrow"></span>' +
+                            '</div>' +
+                        '</div>',
+                },
+                afterShow: function(instance, current) {
+                    // console.log('test');
+                },
+                onInit: function() {
+                    // console.log('test2')
+                }
+            });
+        });
 
 
 // Разовое обновление
@@ -64,9 +102,9 @@ $('#button_request').click(function() {
 });
 
 // Закрытие модального окна
-$('.modal').find('.close, .modal_shadow, #close').click(function(){
+$('.modal').find('.close, .modal_shadow, #close').click(function() {
     var name = $(this).attr('data-name');
-    $('#'+name).fadeOut();
+    $('#' + name).fadeOut();
     $('body').removeClass('modal-open');
     $('#panel').show();
     // console.log($(this))
@@ -83,7 +121,7 @@ $(document).keyup(function(e) {
 });
 
 // Открытие окна с Вакансиями
-$('body').find('[id=openNewHire]').click(function(){
+$('body').find('[id=openNewHire]').click(function() {
     var title = $(this).attr('data-title');
     $('#newHire').fadeIn();
     $('#newHire').find('.title-info').text(title);
@@ -91,18 +129,18 @@ $('body').find('[id=openNewHire]').click(function(){
 });
 
 // Плавная прокрутка к якорю
-$(window).on('load', function(){
-  // var top = $(window.location.hash).offset().top;
-  // $('html,body').stop().animate({
-  //   scrollTop: top
-  // }, 1000);
+$(window).on('load', function() {
+    // var top = $(window.location.hash).offset().top;
+    // $('html,body').stop().animate({
+    //   scrollTop: top
+    // }, 1000);
 });
 $(document).ready(function() {
     $('input[name=form_text_7]').mask('+7(999) 999-9999');
-    $('a.link_anchor').click(function(event){
+    $('a.link_anchor').click(function(event) {
         event.preventDefault();
         var blockID = $(this).attr('href').split('#')[1];
-        var top = $('#'+blockID).offset().top,
+        var top = $('#' + blockID).offset().top,
             top_head = 160;
         top -= top_head; // Добавляем отступ сверху
         $('html,body').animate({
@@ -118,14 +156,15 @@ $('body').find('[id=openNewScreen]').click(function() {
         title = $(this).attr('data-title'),
         link = $(this).attr('data-link'),
         current = 0, // Текущий
-        prev = 0, next = 0,
+        prev = 0,
+        next = 0,
         countClone = $('#screen').find('.cloned [id=openNewScreen]').length,
         count = $openNewScreen.length - countClone, // Количество
         i = 0;
     $openNewScreen.each(function() {
-        if(!$(this).closest('.cloned').hasClass('cloned')) {
+        if (!$(this).closest('.cloned').hasClass('cloned')) {
             i++;
-            if($(this).attr('data-link') == link) {
+            if ($(this).attr('data-link') == link) {
                 // Это текущий слайд
                 current = i;
                 return false;
@@ -133,36 +172,36 @@ $('body').find('[id=openNewScreen]').click(function() {
         }
     });
     // Считаем предыдущий и следующий слайд
-    if(current+1 > count) {
+    if (current + 1 > count) {
         // Это последний слайд
         next = 1;
     } else {
         next = current + 1;
     }
-    if(current - 1 < 1) {
+    if (current - 1 < 1) {
         // Это первый слайд
         prev = count;
     } else {
         prev = current - 1;
     }
     // Устанавливаем ссылки
-    $newScreen.find('.arrow_left').attr({'data-prev': prev});
-    $newScreen.find('.arrow_right').attr({'data-next': next});
+    $newScreen.find('.arrow_left').attr({ 'data-prev': prev });
+    $newScreen.find('.arrow_right').attr({ 'data-next': next });
 
     $newScreen.find('.arrow_left .counter').text(prev + '/' + count);
     $newScreen.find('.arrow_right .counter').text(next + '/' + count);
     $newScreen.fadeIn();
     $newScreen.find('.title h3').text(title);
-    $newScreen.find('.photo').html('<img src="'+link+'" alt="" />');
+    $newScreen.find('.photo').html('<img src="' + link + '" alt="" />');
     $('body').addClass('modal-open');
     $('#panel').hide();
     return false;
 });
 // Переключение на следующий и предыдущий Обзоры сервиса
 $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .close').click(function() {
-    if($(this).hasClass('close')) {
+    if ($(this).hasClass('close')) {
         var name = $(this).attr('data-name');
-        $('#'+name).fadeOut();
+        $('#' + name).fadeOut();
         $('body').removeClass('modal-open');
         $('#panel').show();
         return true;
@@ -170,21 +209,22 @@ $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .clo
     var $newScreen = $('#newScreen'),
         $openNewScreen = $('#screen').find('[id=openNewScreen]'),
         current = parseInt($(this).attr('data-prev')), // Текущий
-        prev = 0, next = 0,
+        prev = 0,
+        next = 0,
         title = '', // Название окна
-        link  = '', // ID - видео ютуба
+        link = '', // ID - видео ютуба
         countClone = $('#screen').find('.cloned [id=openNewScreen]').length,
         count = $openNewScreen.length - countClone, // Количество
         i = 0;
     // Проверяем пользователь нажал на предыдущий или следующий слайд
     current = $(this).hasClass('arrow_left') ? current : parseInt($(this).attr('data-next'));
     // console.log(current);
-    if(current) {
+    if (current) {
         // Есть ссылка на слайд, значит можем переключиться
         $openNewScreen.each(function() {
-            if(!$(this).closest('.cloned').hasClass('cloned')) {
+            if (!$(this).closest('.cloned').hasClass('cloned')) {
                 i++;
-                if(i == current) {
+                if (i == current) {
                     // Это текущий слайд
                     title = $(this).attr('data-title');
                     link = $(this).attr('data-link');
@@ -194,13 +234,13 @@ $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .clo
             }
         });
         // Считаем предыдущий и следующий слайд
-        if(current + 1 > count) {
+        if (current + 1 > count) {
             // Это последний слайд
             next = 1;
         } else {
             next = current + 1;
         }
-        if(current - 1 < 1) {
+        if (current - 1 < 1) {
             // Это первый слайд
             prev = count;
         } else {
@@ -208,17 +248,17 @@ $('body').find('#newScreen .arrow_left, #newScreen .arrow_right, #newScreen .clo
         }
 
         // Устанавливаем ссылки
-        $newScreen.find('.arrow_left').attr({'data-prev': prev});
-        $newScreen.find('.arrow_right').attr({'data-next': next});
+        $newScreen.find('.arrow_left').attr({ 'data-prev': prev });
+        $newScreen.find('.arrow_right').attr({ 'data-next': next });
 
         $newScreen.find('.arrow_left .counter').text(prev + '/' + count);
         $newScreen.find('.arrow_right .counter').text(next + '/' + count);
         $newScreen.fadeIn();
         $newScreen.find('.title h3').text(title);
-        $newScreen.find('.photo').html('<img src="'+link+'" alt="" />');
+        $newScreen.find('.photo').html('<img src="' + link + '" alt="" />');
         $('body').addClass('modal-open');
         $('#panel').hide();
-        
+
     }
 
     return false;
@@ -232,45 +272,46 @@ $('body').find('[id=openNewVideo]').click(function() {
         title = $(this).attr('data-title'),
         link = $(this).attr('data-link'),
         current = 0, // Текущий
-        prev = 0, next = 0,
+        prev = 0,
+        next = 0,
         count = $openNewVideo.length, // Количество
         i = 0;
     $openNewVideo.each(function() {
         i++;
-        if($(this).attr('data-link') == link) {
+        if ($(this).attr('data-link') == link) {
             // Это текущий слайд
             current = i;
             return false;
         }
     });
-    if(count == 0) {
+    if (count == 0) {
         $newVideo.find('.arrow_left').hide();
         $newVideo.find('.arrow_right').hide();
     }
     // Считаем предыдущий и следующий слайд
-    if(current+1 > count) {
+    if (current + 1 > count) {
         // Это последний слайд
         next = 1;
     } else {
         next = current + 1;
     }
-    if(current - 1 < 1) {
+    if (current - 1 < 1) {
         // Это первый слайд
         prev = count;
     } else {
         prev = current - 1;
     }
     // Устанавливаем ссылки
-    $newVideo.find('.arrow_left').attr({'data-prev': prev});
-    $newVideo.find('.arrow_right').attr({'data-next': next});
+    $newVideo.find('.arrow_left').attr({ 'data-prev': prev });
+    $newVideo.find('.arrow_right').attr({ 'data-next': next });
 
     $newVideo.find('.arrow_left .counter').text(prev + '/' + count);
     $newVideo.find('.arrow_right .counter').text(next + '/' + count);
     $newVideo.fadeIn();
     $newVideo.find('.title h3').text(title);
-    $newVideo.find('.video').html('<iframe width="100%" height="600" src="https://www.youtube.com/embed/'+
-        link
-        +'?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+    $newVideo.find('.video').html('<iframe width="100%" height="600" src="https://www.youtube.com/embed/' +
+        link +
+        '?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
     $('body').addClass('modal-open');
     $('#panel').hide();
     return false;
@@ -280,19 +321,20 @@ $('body').find('#newVideo .arrow_left, #newVideo .arrow_right').click(function()
     var $newVideo = $('#newVideo'),
         $openNewVideo = $('#overview').find('[id=openNewVideo]'),
         current = parseInt($(this).attr('data-prev')), // Текущий
-        prev = 0, next = 0,
+        prev = 0,
+        next = 0,
         title = '', // Название окна
-        link  = '', // ID - видео ютуба
+        link = '', // ID - видео ютуба
         count = $openNewVideo.length, // Количество
         i = 0;
     // Проверяем пользователь нажал на предыдущий или следующий слайд
     current = $(this).hasClass('arrow_left') ? current : parseInt($(this).attr('data-next'));
     // console.log(current);
-    if(current) {
+    if (current) {
         // Есть ссылка на слайд, значит можем переключиться
         $openNewVideo.each(function() {
             i++;
-            if(i == current) {
+            if (i == current) {
                 // Это текущий слайд
                 title = $(this).attr('data-title');
                 link = $(this).attr('data-link');
@@ -301,13 +343,13 @@ $('body').find('#newVideo .arrow_left, #newVideo .arrow_right').click(function()
             }
         });
         // Считаем предыдущий и следующий слайд
-        if(current + 1 > count) {
+        if (current + 1 > count) {
             // Это последний слайд
             next = 1;
         } else {
             next = current + 1;
         }
-        if(current - 1 < 1) {
+        if (current - 1 < 1) {
             // Это первый слайд
             prev = count;
         } else {
@@ -315,19 +357,19 @@ $('body').find('#newVideo .arrow_left, #newVideo .arrow_right').click(function()
         }
 
         // Устанавливаем ссылки
-        $newVideo.find('.arrow_left').attr({'data-prev': prev});
-        $newVideo.find('.arrow_right').attr({'data-next': next});
+        $newVideo.find('.arrow_left').attr({ 'data-prev': prev });
+        $newVideo.find('.arrow_right').attr({ 'data-next': next });
 
         $newVideo.find('.arrow_left .counter').text(prev + '/' + count);
         $newVideo.find('.arrow_right .counter').text(next + '/' + count);
         $newVideo.fadeIn();
         $newVideo.find('.title h3').text(title);
-        $newVideo.find('.video').html('<iframe width="100%" height="600" src="https://www.youtube.com/embed/'+
-            link
-            +'?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        $newVideo.find('.video').html('<iframe width="100%" height="600" src="https://www.youtube.com/embed/' +
+            link +
+            '?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
         $('body').addClass('modal-open');
         $('#panel').hide();
-        
+
     }
 
     return false;
@@ -335,40 +377,40 @@ $('body').find('#newVideo .arrow_left, #newVideo .arrow_right').click(function()
 
 
 // Выбор главного цвета на изображении
-$('.s-color.cards').find('.card').each(function(){
+$('.s-color.cards').find('.card').each(function() {
     $(this).hover(function() {
         var c = $(this).attr('data-color');
         var tc = $(this).attr('data-tcolor');
-        if(tc) {
-            $(this).find('.card_title a, .card_text').css({'color': tc});
+        if (tc) {
+            $(this).find('.card_title a, .card_text').css({ 'color': tc });
         }
-        $(this).css({'background': c});
-    },function() {
-        $(this).find('.card_title a, .card_text').css({'color': '#373737'});
-        $(this).css({'background': '#fff'})
+        $(this).css({ 'background': c });
+    }, function() {
+        $(this).find('.card_title a, .card_text').css({ 'color': '#373737' });
+        $(this).css({ 'background': '#fff' })
     })
 });
 
 $('.slider').each(function() {
-    var $el = $(this).find('.slider_inner'), 
-    $count = $(this).find('.count'),
-    $arrows = $(this).find('.arrows'),
-    $wrapper = $(this).find('.slider_wrapper');
+    var $el = $(this).find('.slider_inner'),
+        $count = $(this).find('.count'),
+        $arrows = $(this).find('.arrows'),
+        $wrapper = $(this).find('.slider_wrapper');
     $(this).parent().prev('header').removeClass('h-top');
 
-    $(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
-    $(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
+    $(this).find('.slide_photo_img').css({ 'width': $el.width() + 'px', 'height': $el.height() + 'px' });
+    $(this).find('.slide').css({ 'width': $el.width() + 'px', 'height': $el.height() + 'px' });
     $wrapper.owlCarousel({
-        loop:true,
-        margin:0,
-        nav:false,
+        loop: true,
+        margin: 0,
+        nav: false,
         dots: true,
         autoWidth: true,
         items: 1,
     });
     $wrapper.on('resize.owl.carousel', function(event) {
-        $(this).find('.slide').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
-        $(this).find('.slide_photo_img').css({'width': $el.width() + 'px', 'height': $el.height() + 'px'});
+        $(this).find('.slide').css({ 'width': $el.width() + 'px', 'height': $el.height() + 'px' });
+        $(this).find('.slide_photo_img').css({ 'width': $el.width() + 'px', 'height': $el.height() + 'px' });
     });
 
     $(this).find('.arrow_right').click(function() {
@@ -380,30 +422,30 @@ $('.slider').each(function() {
     })
 });
 $('.qslider').each(function() {
-    var $el = $(this), 
-    $count = $(this).find('.count'),
-    $arrows = $(this).find('.arrows'),
-    $wrapper = $(this).find('.swrapper'),
-    $slide = $wrapper.find('.slide');
+    var $el = $(this),
+        $count = $(this).find('.count'),
+        $arrows = $(this).find('.arrows'),
+        $wrapper = $(this).find('.swrapper'),
+        $slide = $wrapper.find('.slide');
 
     // $slide.css({'width': $el.width()/3 + 'px'});
     $wrapper.owlCarousel({
-        loop:true,
-        margin:0,
-        dots:true,
-        nav:false,
+        loop: true,
+        margin: 0,
+        dots: true,
+        nav: false,
         autoWidth: false,
-        responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:2
-        },
-        992:{
-            items:3
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
         }
-    }
     });
     $wrapper.on('resize.owl.carousel', function(event) {
         // $slide.css({'width': $el.width()/3 + 'px'});
@@ -419,23 +461,23 @@ $('.qslider').each(function() {
 });
 
 $('.rslider').each(function() {
-    var $el = $(this), 
-    $count = $(this).find('.count'),
-    $arrows = $(this).find('.arrows'),
-    $wrapper = $(this).find('.swrapper'),
-    $slide = $wrapper.find('.slide');
+    var $el = $(this),
+        $count = $(this).find('.count'),
+        $arrows = $(this).find('.arrows'),
+        $wrapper = $(this).find('.swrapper'),
+        $slide = $wrapper.find('.slide');
 
-    $slide.css({'width': $el.width() + 'px'});
+    $slide.css({ 'width': $el.width() + 'px' });
     $wrapper.owlCarousel({
-        loop:true,
-        margin:0,
-        dots:true,
-        nav:false,
+        loop: true,
+        margin: 0,
+        dots: true,
+        nav: false,
         autoWidth: true,
         items: 1,
     });
     $wrapper.on('resize.owl.carousel', function(event) {
-        $slide.css({'width': $el.width() + 'px'});
+        $slide.css({ 'width': $el.width() + 'px' });
     });
 
     $(this).find('.arrow_right').click(function() {
@@ -449,37 +491,39 @@ $('.rslider').each(function() {
 
 // Галерея скриншотов
 $('#screens').each(function() {
-    var $el = $(this), 
-    $wrapper = $(this).find('.swrapper'),
-    $slide = $wrapper.find('.item');
-    if($el.hasClass('gallery')) {
+    var $el = $(this),
+        $wrapper = $(this).find('.swrapper'),
+        $slide = $wrapper.find('.item');
+    if ($el.hasClass('gallery')) {
         // Это галерея в О Компании
         $wrapper.owlCarousel({
-            loop:true,
-            margin:0,
-            dots:true,
-            nav:false,
+            loop: true,
+            margin: 0,
+            dots: true,
+            nav: false,
             autoWidth: true,
             autoplay: true,
             items: 3,
-            autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            slideBy: 3,
+            autoplayHoverPause: true,
         });
-        $wrapper.trigger('play.owl.autoplay',[5000]);
+        $wrapper.trigger('play.owl.autoplay', [5000]);
     } else {
         $wrapper.owlCarousel({
-            loop:true,
-            margin:0,
-            dots:true,
-            nav:false,
+            loop: true,
+            margin: 0,
+            dots: true,
+            nav: false,
             autoWidth: true,
             items: 3,
-            autoplay:true,
-            autoplayTimeout:5000,
-            autoplayHoverPause:true,
+            autoplay: true,
+            slideBy: 3,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
         });
-        $wrapper.trigger('play.owl.autoplay',[5000]);
+        $wrapper.trigger('play.owl.autoplay', [5000]);
     }
 
 });
@@ -492,12 +536,21 @@ var $topE = 0; // Высота прокрутки
 
 $('.menu_mobile').on('click', function() {
     $('.menu_top').show();
-    $('body').css({'overflow': 'hidden'});
+    $('body').css({ 'overflow': 'hidden' });
     $topE = $(window).scrollTop();
+
+    var panel_h = $('#panel').height(),
+        $menu = $(this).find('ul'),
+        $close = $(this).find('.close'),
+        menu_top = $menu.offset().top,
+        close_top = $close.offset().top;
+
+    $menu.css({top: menu_top+panel_h+'px'});
+    $close.css({top: close_top+panel_h+'px'});
 })
 $('.menu_top .close').on('click', function() {
     $('.menu_top').hide();
-    $('body').css({'overflow':'auto'});
+    $('body').css({ 'overflow': 'auto' });
     $('html, body').animate({
         scrollTop: $topE
     }, 0);
@@ -505,7 +558,7 @@ $('.menu_top .close').on('click', function() {
 
 
 
-// Шапка сайта2
+// Шапка сайта
 function initHeader() {
     var s_w = $(window).width(),
         top = $(window).scrollTop(),
@@ -517,18 +570,17 @@ function initHeader() {
         $main = $('.header.header_main'),
         $product = $('.header.header_product'),
         isDesktop = s_w > 768;
-    if(isDesktop) {
+    if (isDesktop) {
         main_h = 133;
         main_hmin = 80;
     } else {
         main_h = 100;
         main_hmin = 68;
     }
-    console.log($main.attr('class'));
     point_fade = main_h - main_hmin + panel_h;
-    if($main.hasClass('h-slide') || isMainSlider) {
+    if ($main.hasClass('h-slide') || isMainSlider) {
         isMainSlider = true;
-        if(top > point_fade) {
+        if (top > panel_h) {
             $main.removeClass('h-slide');
             $main.addClass('h-top');
         } else {
@@ -537,21 +589,20 @@ function initHeader() {
         }
     }
 
-
-    if(top > point_fade) {
+    if (top > point_fade) {
         var tt = panel_h - top;
-        if(tt < 0) {
+        if (tt < 0) {
             tt = 0;
         }
-        $main.css({'height': main_hmin+'px', 'top' : tt+'px'});
-        $product.css({'top': tt+main_hmin+'px'});
+        $main.css({ 'height': main_hmin + 'px', 'top': tt + 'px' });
+        $product.css({ 'top': tt + main_hmin + 'px' });
     } else {
         var tt = panel_h - top;
-        if(tt < 0) {
+        if (tt < 0) {
             tt = 0;
         }
-        $main.css({'height': main_h+'px', 'top' : tt+'px'});
-        $product.css({'top': tt+main_h+'px'});
+        $main.css({ 'height': main_h + 'px', 'top': tt + 'px' });
+        $product.css({ 'top': tt + main_h + 'px' });
     }
 }
 
@@ -561,8 +612,5 @@ $(document).on('scroll', function() {
 
 
 // Init functions
-$(document).ready(function() {
-    initHeader();
-});
-
+initHeader();
 },{}]},{},[1])

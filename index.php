@@ -85,7 +85,6 @@ CModule::IncludeModule("iblock");
                 ),
                 false
             ); ?>
-            
         </section>
         <!-- Продукты -->
         <section id="main_products" class="block_content products">
@@ -95,7 +94,7 @@ CModule::IncludeModule("iblock");
                 </div>
                 <div class="items_inner">
                     <div class="cards product-cards s-color ct_3 ctm_1 cts_1">
-                        <div class="card slide" data-product="pau" data-color="#5D5A57" data-tcolor="#fff">
+                        <div class="card slide" data-product="pau" data-color="#EB6B6C" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-pau.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>Помощник арбитражного управляющего</a></h5>
@@ -105,8 +104,8 @@ CModule::IncludeModule("iblock");
                             </div>
                             <a href="/products/pau" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-product="hudway" data-color="#5D5A57" data-tcolor="#fff">
-                            <div style="background-image: url(/upload/images/item/prod-hudway.svg);background-size: auto 54px;background-position: left center;" class="holder_image card_photo"></div>
+                        <div class="card slide" data-product="hudway" data-color="#4690CD" data-tcolor="#fff">
+                            <div style="background-image: url(/upload/images/item/prod-hudway.svg);" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>HUDWAY</a></h5>
                                 <p class="card_text">
@@ -115,7 +114,7 @@ CModule::IncludeModule("iblock");
                             </div>
                             <a href="https://hudwayapp.com/ru" target="_blank" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-product="fa" data-color="#5D5A57" data-tcolor="#fff">
+                        <div class="card slide" data-product="fa" data-color="#8BB593" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-fa.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>F-анализ</a></h5>
@@ -133,7 +132,7 @@ CModule::IncludeModule("iblock");
                             </div>
                             <a href="http://mnogopisem.ru/" target="_blank" class="card_link"><span></span></a>
                         </div>
-                        <div class="card slide" data-product="probili" data-color="#5D5A57" data-tcolor="#fff">
+                        <div class="card slide" data-product="probili" data-color="#CD4550" data-tcolor="#fff">
                             <div style="background-image: url(/upload/images/item/prod-probili.svg)" class="holder_image card_photo"></div>
                             <div class="card_body">
                                 <h5 class="card_title"><a>Пробили.Ру</a></h5>
@@ -162,36 +161,41 @@ CModule::IncludeModule("iblock");
                     <div class="card">
                         <div class="card_body">
                             <h5 class="card_title"><a>Сайты и<br/> веб-сервисы</a></h5>
-                            <p class="card_text">
-                                - Корпоративные сайты
-                                <br/> - Интернет-магазины
-                                <br/> - Промо
-                                <br/> - Лэндинги
-                                <br/> - CRM, интеграция
-                            </p>
+                            <div class="card_text text">
+                                <ul class="list_line">
+                                    <li>Корпоративные сайты</li>
+                                    <li>Интернет-магазины</li>
+                                    <li>Промо</li>
+                                    <li>Лэндинги</li>
+                                    <li>CRM, интеграция</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card_icon"></div>
                     </div>
                     <div class="card">
                         <div class="card_body">
                             <h5 class="card_title"><a>Мобильные приложения</a></h5>
-                            <p class="card_text">
-                                - iOS
-                                <br/> - Android
-                                <br/>
-                            </p>
+                            <div class="card_text text">
+                                <ul class="list_line">
+                                    <li>iOs</li>
+                                    <li>Android</li>
+                                </ul>
+                                
+                            </div>
                         </div>
                         <div class="card_icon"></div>
                     </div>
                     <div class="card">
                         <div class="card_body">
                             <h5 class="card_title"><a>Разработка программного обеспечения</a></h5>
-                            <p class="card_text">
-                                - Бизнес-анализ и консалтинг
-                                <br/> - Разработка заказных ERP и CRM
-                                <br/> - Внедрение, развертывание, <span class="lindent"></span>интеграция и настройка
-                                <br/>
-                            </p>
+                            <div class="card_text text">
+                                <ul class="list_line">
+                                    <li>Бизнес-анализ и консалтинг</li>
+                                    <li>Разработка заказных ERP и CRM</li>
+                                    <li>Внедрение, развертывание, интеграция и настройка</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="card_icon"></div>
                     </div>
@@ -319,8 +323,8 @@ CModule::IncludeModule("iblock");
     #launcher {
         display: none
     }
-
     /* Продукты */
+
     .cards.product-cards .card[data-product="pau"]:hover .card_photo {
         background-image: url(/upload/images/item/prod-pau-h.svg)!important;
     }

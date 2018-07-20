@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Продукты");
     <section class="products block_content">
         <div class="container">
             <div class="cards product-cards s-color ct_3 ctm_1 cts_1">
-                <div class="card slide" data-product="pau" data-color="#5D5A57" data-tcolor="#fff">
+                <div class="card slide" data-product="pau" data-color="#EB6B6C" data-tcolor="#fff">
                     <div style="background-image: url(/upload/images/item/prod-pau.svg)" class="holder_image card_photo"></div>
                     <div class="card_body">
                         <h5 class="card_title"><a>Помощник арбитражного управляющего</a></h5>
@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Продукты");
                     </div>
                     <a href="/products/pau" class="card_link"><span></span></a>
                 </div>
-                <div class="card slide" data-product="hudway" data-color="#5D5A57" data-tcolor="#fff">
+                <div class="card slide" data-product="hudway" data-color="#4690CD" data-tcolor="#fff">
                     <div style="background-image: url(/upload/images/item/prod-hudway.svg);background-size: auto 54px;background-position: left center;" class="holder_image card_photo"></div>
                     <div class="card_body">
                         <h5 class="card_title"><a>HUDWAY</a></h5>
@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("Продукты");
                     </div>
                     <a href="https://hudwayapp.com/ru" target="_blank" class="card_link"><span></span></a>
                 </div>
-                <div class="card slide" data-product="fa" data-color="#5D5A57" data-tcolor="#fff">
+                <div class="card slide" data-product="fa" data-color="#8BB593" data-tcolor="#fff">
                     <div style="background-image: url(/upload/images/item/prod-fa.svg)" class="holder_image card_photo"></div>
                     <div class="card_body">
                         <h5 class="card_title"><a>F-анализ</a></h5>
@@ -44,7 +44,7 @@ $APPLICATION->SetTitle("Продукты");
                     </div>
                     <a href="http://mnogopisem.ru/" target="_blank" class="card_link"><span></span></a>
                 </div>
-                <div class="card slide" data-product="probili" data-color="#5D5A57" data-tcolor="#fff">
+                <div class="card slide" data-product="probili" data-color="#CD4550" data-tcolor="#fff">
                     <div style="background-image: url(/upload/images/item/prod-probili.svg)" class="holder_image card_photo"></div>
                     <div class="card_body">
                         <h5 class="card_title"><a>Пробили.Ру</a></h5>
@@ -55,7 +55,7 @@ $APPLICATION->SetTitle("Продукты");
                     <a href="https://probili.ru/" target="_blank" class="card_link"><span></span></a>
                 </div>
             </div>
-            
+
         </div>
     </section>
     <style>

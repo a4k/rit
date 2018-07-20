@@ -24,6 +24,8 @@ $ARROWS_SHOW = $arParams['ARROWS_SHOW']; // показывать переклю�
 if(!isset($ITEM)) {
     $ITEM = 'item';
 }
+
+$item_i = 0;
 ?>
 <div class="sinner <?echo $INNER?>" id="<?echo $SLIDER_ID?>" data-view="<?echo $DATA_VIEW?>">
     <div class="swrapper owl-carousel <?echo $WRAPPER?>">
@@ -46,11 +48,11 @@ if(!isset($ITEM)) {
                 $title = $arItem['NAME']; // Название слайда
                 $picture_preview = $arItem['PREVIEW_PICTURE']['SRC']; // Маленькая картинка
                 $picture_detail = $arItem['DETAIL_PICTURE']['SRC']; // Большая картинка
-
+                $item_i++;
             ?>
 
             <?if($SLIDER_ID == 'main_screens'):?>
-                <div class="<?echo $ITEM?>">
+                <div class="<?echo $ITEM?>" data-item="<?echo $item_i;?>">
                     <!-- <?print_r($arItem['PROPERTIES']['code'])?> -->
                     <?if($show_code == '111'): ?>
                         <?echo $code?>
@@ -60,7 +62,7 @@ if(!isset($ITEM)) {
                         </div>
                         <div class="container slide_info">
                             <div class="slide_title">
-                                <h2><?echo $title?></h2>
+                                <h1><?echo $title?></h1>
                             </div>
                             <div class="slide_about">
                                 <p>
@@ -75,9 +77,9 @@ if(!isset($ITEM)) {
 
             <?else:?>
                 <div class="<?echo $ITEM?>">
-                    <div id="openNewScreen" data-title="<?echo $title?>" data-link="<?echo $picture_detail?>">
+                    <a class="item_screen" data-fancybox="gallery" href="<?echo $picture_detail?>">
                         <img src="<?echo $picture_preview?>" alt="">
-                    </div>
+                    </a>
                 </div>
             <?endif?>
         <?endforeach;?>

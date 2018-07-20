@@ -33,6 +33,7 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
 <!-- <? Asset::getInstance()->addJs('/local/assets/js/owl.carousel.js'); ?> -->
 <? Asset::getInstance()->addJs('/local/assets/js/mc-validate.js'); ?>
 <? Asset::getInstance()->addJs('/local/assets/js/jquery.maskedinput.min.js'); ?>
+<? Asset::getInstance()->addJs('/local/assets/js/fancybox.jquery.js'); ?>
 <!-- <? Asset::getInstance()->addJs('/local/assets/js/app.js'); ?> -->
 
 
@@ -43,6 +44,7 @@ $index = ($APPLICATION->GetCurPage(false) === '/')
 <link rel="stylesheet" type="text/css" href="/local/assets/css/reset.css">
 <link rel='stylesheet' href='/local/assets/css/owl.carousel.min.css'/>
 <link rel="stylesheet" type="text/css" href="/local/assets/css/flexboxgrid.min.css"/>
+<link rel="stylesheet" type="text/css" href="/local/assets/css/fancybox.jquery.css"/>
 <link rel="stylesheet" type="text/css" href="/local/assets/css/app.css"/>
 
 
